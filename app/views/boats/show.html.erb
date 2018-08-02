@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @boat.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @boat.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @boat.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @boat.ncic_num %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @boat.description %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @boat.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @boat.owner_phone %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @boat.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @boat.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @boat.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_boat_path(@boat) %> |
+<%= link_to 'Back', boats_path %>

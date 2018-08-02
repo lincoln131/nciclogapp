@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th id="ncicNames">|OCA</th>
+      <th id="ncicNames">|Operator</th>
+      <th id="ncicNames">|Officer</th>
+      <th id="ncicNames">|NCIC#</th>
+      <th id="ncicNames">|Make</th>
+      <th id="ncicNames">|Model</th>
+      <th id="ncicNames">|Serial</th>
+      <th id="ncicNames">|Description</th>
+      <th id="ncicNames">|Owner Name</th>
+      <th id="ncicNames">|Owner Phone</th>
+      <th id="ncicNames">|Date Add</th>
+      <th id="ncicNames">|Date Remove</th>
+      <th id="ncicNames">|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td id="ncicNames"><%= article.oca %></td>
+        <td id="ncicNames"><%= article.operator_name %></td>
+        <td id="ncicNames"><%= article.officer_name %></td>
+        <td id="ncicNames"><%= article.ncic_num %></td>
+        <td id="ncicNames"><%= article.make %></td>
+        <td id="ncicNames"><%= article.model %></td>
+        <td id="ncicNames"><%= article.serial %></td>
+        <td id="ncicNames"><%= article.description %></td>
+        <td id="ncicNames"><%= article.owner_name %></td>
+        <td id="ncicNames"><%= article.owner_phone %></td>
+        <td id="ncicNames"><%= article.date_add %></td>
+        <td id="ncicNames"><%= article.date_remove %></td>
+        <td id="ncicNames"><%= article.remove_by %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>
+<br>
+<br>
+<%= link_to 'Home', '/' %>
+<br>
+<br><%= link_to 'Articles', articles_path %>
+<br><%= link_to 'Boats', boats_path %>
+<br><%= link_to 'Guns - Recovered', recovered_guns_path %>
+<br><%= link_to 'Guns - Stolen', stolen_guns_path %>
+<br><%= link_to 'License Plates', license_plates_path %>
+<br><%= link_to 'Missing Persons', missing_people_path %>
+<br><%= link_to 'Parts - Vehicles / Boats', vehicle_boat_parts_path %>
+<br><%= link_to 'Vehicles - Stolen', stolen_vehicles_path %>
+<br><%= link_to 'Vehicles - Recovered', recovered_vehicles_path %>
+<br><%= link_to 'Securities', securities_path %>
+<br><%= link_to 'Wanted - Persons', wanted_people_path %>

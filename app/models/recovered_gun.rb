@@ -1,0 +1,2 @@
+class RecoveredGun < ApplicationRecord
+end

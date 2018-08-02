@@ -1,0 +1,2 @@
+class StolenGun < ApplicationRecord
+end

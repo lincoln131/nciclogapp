@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Wanted Persons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|NCIC#</th>
+      <th>|Description</th>
+      <th>|Owner Name</th>
+      <th>|Owner Phone</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wanted_people.each do |wanted_person| %>
+      <tr>
+        <td><%= wanted_person.oca %></td>
+        <td><%= wanted_person.operator_name %></td>
+        <td><%= wanted_person.officer_name %></td>
+        <td><%= wanted_person.ncic_num %></td>
+        <td><%= wanted_person.description %></td>
+        <td><%= wanted_person.owner_name %></td>
+        <td><%= wanted_person.owner_phone %></td>
+        <td><%= wanted_person.date_add %></td>
+        <td><%= wanted_person.date_remove %></td>
+        <td><%= wanted_person.remove_by %></td>
+        <td><%= link_to 'Show', wanted_person %></td>
+        <td><%= link_to 'Edit', edit_wanted_person_path(wanted_person) %></td>
+        <%# <td><%= link_to 'Destroy', wanted_person, method: :delete, data: { confirm: 'Are you sure?' } %></td> %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wanted Person', new_wanted_person_path %>
+<br>
+<%= link_to 'Home', '/' %>

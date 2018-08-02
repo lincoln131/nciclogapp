@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @wanted_person.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @wanted_person.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @wanted_person.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @wanted_person.ncic_num %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wanted_person.description %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @wanted_person.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @wanted_person.owner_phone %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @wanted_person.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @wanted_person.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @wanted_person.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_wanted_person_path(@wanted_person) %> |
+<%= link_to 'Back', wanted_people_path %>

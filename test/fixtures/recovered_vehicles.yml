@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  oca: MyString
+  operator_name: MyString
+  officer_name: MyString
+  year: MyString
+  make: MyString
+  model: MyString
+  vin: MyString
+  license_plate: MyString
+  color: MyString
+  wrecker: MyString
+  date_add: MyString
+  date_remove: MyString
+  remove_by: MyString
+
+two:
+  oca: MyString
+  operator_name: MyString
+  officer_name: MyString
+  year: MyString
+  make: MyString
+  model: MyString
+  vin: MyString
+  license_plate: MyString
+  color: MyString
+  wrecker: MyString
+  date_add: MyString
+  date_remove: MyString
+  remove_by: MyString

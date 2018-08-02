@@ -1,0 +1,2 @@
+module LicensePlatesHelper
+end

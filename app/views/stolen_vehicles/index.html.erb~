@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Stolen Vehicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|NCIC#</th>
+      <th>|Year</th>
+      <th>|Make</th>
+      <th>|Model</th>
+      <th>|Vin</th>
+      <th>|License Plate</th>
+      <th>|Color</th>
+      <th>|Owner Name</th>
+      <th>|Owner Phone</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Remove by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stolen_vehicles.each do |stolen_vehicle| %>
+      <tr>
+        <td><%= stolen_vehicle.oca %></td>
+        <td><%= stolen_vehicle.operator_name %></td>
+        <td><%= stolen_vehicle.officer_name %></td>
+        <td><%= stolen_vehicle.ncic_num %></td>
+        <td><%= stolen_vehicle.year %></td>
+        <td><%= stolen_vehicle.make %></td>
+        <td><%= stolen_vehicle.model %></td>
+        <td><%= stolen_vehicle.vin %></td>
+        <td><%= stolen_vehicle.license_plate %></td>
+        <td><%= stolen_vehicle.color %></td>
+        <td><%= stolen_vehicle.owner_name %></td>
+        <td><%= stolen_vehicle.owner_phone %></td>
+        <td><%= stolen_vehicle.date_add %></td>
+        <td><%= stolen_vehicle.date_remove %></td>
+        <td><%= stolen_vehicle.remove_by %></td>
+        <td><%= link_to 'Show', stolen_vehicle %></td>
+        <td><%= link_to 'Edit', edit_stolen_vehicle_path(stolen_vehicle) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stolen Vehicle', new_stolen_vehicle_path %>
+<br>
+<%= link_to 'Home', '/' %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Recovered Vehicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|Year</th>
+      <th>|Make</th>
+      <th>|Model</th>
+      <th>|Vin</th>
+      <th>|License Plate</th>
+      <th>|Color</th>
+      <th>|Wrecker</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recovered_vehicles.each do |recovered_vehicle| %>
+      <tr>
+        <td><%= recovered_vehicle.oca %></td>
+        <td><%= recovered_vehicle.operator_name %></td>
+        <td><%= recovered_vehicle.officer_name %></td>
+        <td><%= recovered_vehicle.year %></td>
+        <td><%= recovered_vehicle.make %></td>
+        <td><%= recovered_vehicle.model %></td>
+        <td><%= recovered_vehicle.vin %></td>
+        <td><%= recovered_vehicle.license_plate %></td>
+        <td><%= recovered_vehicle.color %></td>
+        <td><%= recovered_vehicle.wrecker %></td>
+        <td><%= recovered_vehicle.date_add %></td>
+        <td><%= recovered_vehicle.date_remove %></td>
+        <td><%= recovered_vehicle.remove_by %></td>
+        <td><%= link_to 'Show', recovered_vehicle %></td>
+        <td><%= link_to 'Edit', edit_recovered_vehicle_path(recovered_vehicle) %></td>
+        <%# <%# <%# <td><%= link_to 'Destroy', recovered_vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td> %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recovered Vehicle', new_recovered_vehicle_path %>
+<br>
+<%= link_to 'Home', '/' %>
+

@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Securities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th id="ncicNames">|OCA</th>
+      <th id="ncicNames">|Operator</th>
+      <th id="ncicNames">|Officer</th>
+      <th id="ncicNames">|NCIC#</th>
+      <th id="ncicNames">|Serial</th>
+      <th id="ncicNames">|Owner Name</th>
+      <th id="ncicNames">|Owner Phone</th>
+      <th id="ncicNames">|Date Added</th>
+      <th id="ncicNames">|Date Removed</th>
+      <th id="ncicNames">|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @securities.each do |security| %>
+      <tr>
+        <td id="ncicNames"><%= security.oca %></td>
+        <td id="ncicNames"><%= security.operator_name %></td>
+        <td id="ncicNames"><%= security.officer_name %></td>
+        <td id="ncicNames"><%= security.ncic_num %></td>
+        <td id="ncicNames"><%= security.serial %></td>
+        <td id="ncicNames"><%= security.owner_name %></td>
+        <td id="ncicNames"><%= security.owner_phone %></td>
+        <td id="ncicNames"><%= security.date_add %></td>
+        <td id="ncicNames"><%= security.date_remove %></td>
+        <td id="ncicNames"><%= security.remove_by %></td>
+        <td><%= link_to 'Show', security %></td>
+        <td><%= link_to 'Edit', edit_security_path(security) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Security', new_security_path %>
+<br>
+<br>
+<%= link_to 'Home', '/' %>
+<br>
+<br><%= link_to 'Articles', articles_path %>
+<br><%= link_to 'Boats', boats_path %>
+<br><%= link_to 'Guns - Recovered', recovered_guns_path %>
+<br><%= link_to 'Guns - Stolen', stolen_guns_path %>
+<br><%= link_to 'License Plates', license_plates_path %>
+<br><%= link_to 'Missing Persons', missing_people_path %>
+<br><%= link_to 'Parts - Vehicles / Boats', vehicle_boat_parts_path %>
+<br><%= link_to 'Vehicles - Stolen', stolen_vehicles_path %>
+<br><%= link_to 'Vehicles - Recovered', recovered_vehicles_path %>
+<br><%= link_to 'Securities', securities_path %>
+<br><%= link_to 'Wanted - Persons', wanted_people_path %>

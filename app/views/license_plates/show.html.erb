@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @license_plate.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @license_plate.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @license_plate.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @license_plate.ncic_num %>
+</p>
+
+<p>
+  <strong>License plate:</strong>
+  <%= @license_plate.license_plate %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @license_plate.state %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @license_plate.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @license_plate.owner_phone %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @license_plate.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @license_plate.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @license_plate.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_license_plate_path(@license_plate) %> |
+<%= link_to 'Back', license_plates_path %>

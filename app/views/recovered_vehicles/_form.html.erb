@@ -1,0 +1,82 @@
+<%= form_with(model: recovered_vehicle, local: true) do |form| %>
+  <% if recovered_vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recovered_vehicle.errors.count, "error") %> prohibited this recovered_vehicle from being saved:</h2>
+
+      <ul>
+      <% recovered_vehicle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :oca %>
+    <%= form.text_field :oca, id: :recovered_vehicle_oca , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :operator_name %>
+    <%= form.text_field :operator_name, id: :recovered_vehicle_operator_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officer_name %>
+    <%= form.text_field :officer_name, id: :recovered_vehicle_officer_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year, id: :recovered_vehicle_year , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make, id: :recovered_vehicle_make , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :recovered_vehicle_model , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vin %>
+    <%= form.text_field :vin, id: :recovered_vehicle_vin , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license_plate %>
+    <%= form.text_field :license_plate, id: :recovered_vehicle_license_plate , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :recovered_vehicle_color , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wrecker %>
+    <%= form.text_field :wrecker, id: :recovered_vehicle_wrecker , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_add %>
+    <%= form.text_field :date_add, id: :recovered_vehicle_date_add , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_remove %>
+    <%= form.text_field :date_remove, id: :recovered_vehicle_date_remove %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remove_by %>
+    <%= form.text_field :remove_by, id: :recovered_vehicle_remove_by %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

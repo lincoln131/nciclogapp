@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @article.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @article.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @article.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @article.ncic_num %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @article.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @article.model %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @article.serial %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @article.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @article.owner_phone %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @article.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @article.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @article.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

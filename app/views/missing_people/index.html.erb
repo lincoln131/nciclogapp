@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Missing Persons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th id="ncicNames">|OCA</th>
+      <th id="ncicNames">|Operator</th>
+      <th id="ncicNames">|Officer</th>
+      <th id="ncicNames">|NCIC#</th>
+      <th id="ncicNames">|Missing First Name</th>
+      <th id="ncicNames">|Missing Last Name</th>
+      <th id="ncicNames">|Missing DOB</th>
+      <th id="ncicNames">|Missing Race</th>
+      <th id="ncicNames">|Missing Sex</th>
+      <th id="ncicNames">|Contact Name</th>
+      <th id="ncicNames">|Contact Phone</th>
+      <th id="ncicNames">|Date Added</th>
+      <th id="ncicNames">|Date Removed</th>
+      <th id="ncicNames">|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @missing_people.each do |missing_person| %>
+      <tr>
+        <td id="ncicNames"><%= missing_person.oca %></td>
+        <td id="ncicNames"><%= missing_person.operator_name %></td>
+        <td id="ncicNames"><%= missing_person.officer_name %></td>
+        <td id="ncicNames"><%= missing_person.ncic_num %></td>
+        <td id="ncicNames"><%= missing_person.missing_f_name %></td>
+        <td id="ncicNames"><%= missing_person.missing_l_name %></td>
+        <td id="ncicNames"><%= missing_person.missing_dob %></td>
+        <td id="ncicNames"><%= missing_person.missing_race %></td>
+        <td id="ncicNames"><%= missing_person.missing_sex %></td>
+        <td id="ncicNames"><%= missing_person.owner_name %></td>
+        <td id="ncicNames"><%= missing_person.owner_phone %></td>
+        <td id="ncicNames"><%= missing_person.date_add %></td>
+        <td id="ncicNames"><%= missing_person.date_remove %></td>
+        <td id="ncicNames"><%= missing_person.remove_by %></td>
+        <td><%= link_to 'Show', missing_person %></td>
+        <td><%= link_to 'Edit', edit_missing_person_path(missing_person) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Missing Person', new_missing_person_path %>
+<br>
+<br>
+<%= link_to 'Home', '/' %>
+<br>
+<br><%= link_to 'Articles', articles_path %>
+<br><%= link_to 'Boats', boats_path %>
+<br><%= link_to 'Guns - Recovered', recovered_guns_path %>
+<br><%= link_to 'Guns - Stolen', stolen_guns_path %>
+<br><%= link_to 'License Plates', license_plates_path %>
+<br><%= link_to 'Missing Persons', missing_people_path %>
+<br><%= link_to 'Parts - Vehicles / Boats', vehicle_boat_parts_path %>
+<br><%= link_to 'Vehicles - Stolen', stolen_vehicles_path %>
+<br><%= link_to 'Vehicles - Recovered', recovered_vehicles_path %>
+<br><%= link_to 'Securities', securities_path %>
+<br><%= link_to 'Wanted - Persons', wanted_people_path %>

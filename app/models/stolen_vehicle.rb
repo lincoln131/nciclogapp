@@ -1,0 +1,2 @@
+class StolenVehicle < ApplicationRecord
+end

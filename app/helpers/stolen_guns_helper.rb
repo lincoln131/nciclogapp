@@ -1,0 +1,2 @@
+module StolenGunsHelper
+end

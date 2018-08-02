@@ -1,0 +1,2 @@
+class VehicleBoatPart < ApplicationRecord
+end

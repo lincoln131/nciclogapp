@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @security.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @security.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @security.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @security.ncic_num %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @security.serial %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @security.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @security.owner_phone %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @security.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @security.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @security.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_security_path(@security) %> |
+<%= link_to 'Back', securities_path %>

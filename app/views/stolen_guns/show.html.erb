@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @stolen_gun.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @stolen_gun.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @stolen_gun.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @stolen_gun.ncic_num %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @stolen_gun.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @stolen_gun.model %>
+</p>
+
+<p>
+  <strong>Caliber:</strong>
+  <%= @stolen_gun.caliber %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @stolen_gun.serial %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @stolen_gun.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @stolen_gun.owner_phone %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @stolen_gun.notes %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @stolen_gun.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @stolen_gun.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @stolen_gun.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_stolen_gun_path(@stolen_gun) %> |
+<%= link_to 'Back', stolen_guns_path %>

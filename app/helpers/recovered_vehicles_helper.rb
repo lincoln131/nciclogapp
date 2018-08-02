@@ -1,0 +1,2 @@
+module RecoveredVehiclesHelper
+end

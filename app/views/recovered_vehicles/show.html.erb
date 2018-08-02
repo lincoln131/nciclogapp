@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @recovered_vehicle.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @recovered_vehicle.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @recovered_vehicle.officer_name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @recovered_vehicle.year %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @recovered_vehicle.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @recovered_vehicle.model %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @recovered_vehicle.vin %>
+</p>
+
+<p>
+  <strong>License plate:</strong>
+  <%= @recovered_vehicle.license_plate %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @recovered_vehicle.color %>
+</p>
+
+<p>
+  <strong>Wrecker:</strong>
+  <%= @recovered_vehicle.wrecker %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @recovered_vehicle.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @recovered_vehicle.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @recovered_vehicle.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_recovered_vehicle_path(@recovered_vehicle) %> |
+<%= link_to 'Back', recovered_vehicles_path %>

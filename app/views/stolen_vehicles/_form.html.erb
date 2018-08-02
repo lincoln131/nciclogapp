@@ -1,0 +1,92 @@
+<%= form_with(model: stolen_vehicle, local: true) do |form| %>
+  <% if stolen_vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stolen_vehicle.errors.count, "error") %> prohibited this stolen_vehicle from being saved:</h2>
+
+      <ul>
+      <% stolen_vehicle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :oca %>
+    <%= form.text_field :oca, id: :stolen_vehicle_oca , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :operator_name %>
+    <%= form.text_field :operator_name, id: :stolen_vehicle_operator_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officer_name %>
+    <%= form.text_field :officer_name, id: :stolen_vehicle_officer_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ncic_num %>
+    <%= form.text_field :ncic_num, id: :stolen_vehicle_ncic_num , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year, id: :stolen_vehicle_year , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make, id: :stolen_vehicle_make , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :stolen_vehicle_model , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vin %>
+    <%= form.text_field :vin, id: :stolen_vehicle_vin , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license_plate %>
+    <%= form.text_field :license_plate, id: :stolen_vehicle_license_plate , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :stolen_vehicle_color , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner_name %>
+    <%= form.text_field :owner_name, id: :stolen_vehicle_owner_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner_phone %>
+    <%= form.text_field :owner_phone, id: :stolen_vehicle_owner_phone , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_add %>
+    <%= form.text_field :date_add, id: :stolen_vehicle_date_add , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_remove %>
+    <%= form.text_field :date_remove, id: :stolen_vehicle_date_remove %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remove_by %>
+    <%= form.text_field :remove_by, id: :stolen_vehicle_remove_by %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class RecoveredVehicle < ApplicationRecord
+end

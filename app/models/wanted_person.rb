@@ -1,0 +1,2 @@
+class WantedPerson < ApplicationRecord
+end

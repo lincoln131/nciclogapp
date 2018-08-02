@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Recovered Guns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|NCIC#</th>
+      <th>|Make</th>
+      <th>|Model</th>
+      <th>|Caliber</th>
+      <th>|Serial</th>
+      <th>|Owner Name</th>
+      <th>|Owner Phone</th>
+      <th>|Notes</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recovered_guns.each do |recovered_gun| %>
+      <tr>
+        <td><%= recovered_gun.oca %></td>
+        <td><%= recovered_gun.operator_name %></td>
+        <td><%= recovered_gun.officer_name %></td>
+        <td><%= recovered_gun.ncic_num %></td>
+        <td><%= recovered_gun.make %></td>
+        <td><%= recovered_gun.model %></td>
+        <td><%= recovered_gun.caliber %></td>
+        <td><%= recovered_gun.serial %></td>
+        <td><%= recovered_gun.owner_name %></td>
+        <td><%= recovered_gun.owner_phone %></td>
+        <td><%= recovered_gun.notes %></td>
+        <td><%= recovered_gun.date_add %></td>
+        <td><%= recovered_gun.date_remove %></td>
+        <td><%= recovered_gun.remove_by %></td>
+        <td><%= link_to 'Show', recovered_gun %></td>
+        <td><%= link_to 'Edit', edit_recovered_gun_path(recovered_gun) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recovered Gun', new_recovered_gun_path %>
+<br>
+<%= link_to 'Home', '/' %>
+

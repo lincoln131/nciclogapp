@@ -1,0 +1,2 @@
+class LicensePlate < ApplicationRecord
+end

@@ -1,0 +1,72 @@
+<%= form_with(model: license_plate, local: true) do |form| %>
+  <% if license_plate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(license_plate.errors.count, "error") %> prohibited this license_plate from being saved:</h2>
+
+      <ul>
+      <% license_plate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :oca %>
+    <%= form.text_field :oca, id: :license_plate_oca , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :operator_name %>
+    <%= form.text_field :operator_name, id: :license_plate_operator_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officer_name %>
+    <%= form.text_field :officer_name, id: :license_plate_officer_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ncic_num %>
+    <%= form.text_field :ncic_num, id: :license_plate_ncic_num , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license_plate %>
+    <%= form.text_field :license_plate, id: :license_plate_license_plate , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :license_plate_state , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner_name %>
+    <%= form.text_field :owner_name, id: :license_plate_owner_name , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner_phone %>
+    <%= form.text_field :owner_phone, id: :license_plate_owner_phone , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_add %>
+    <%= form.text_field :date_add, id: :license_plate_date_add , :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_remove %>
+    <%= form.text_field :date_remove, id: :license_plate_date_remove %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remove_by %>
+    <%= form.text_field :remove_by, id: :license_plate_remove_by %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

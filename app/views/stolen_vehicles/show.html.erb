@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oca:</strong>
+  <%= @stolen_vehicle.oca %>
+</p>
+
+<p>
+  <strong>Operator name:</strong>
+  <%= @stolen_vehicle.operator_name %>
+</p>
+
+<p>
+  <strong>Officer name:</strong>
+  <%= @stolen_vehicle.officer_name %>
+</p>
+
+<p>
+  <strong>Ncic num:</strong>
+  <%= @stolen_vehicle.ncic_num %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @stolen_vehicle.year %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @stolen_vehicle.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @stolen_vehicle.model %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @stolen_vehicle.vin %>
+</p>
+
+<p>
+  <strong>License plate:</strong>
+  <%= @stolen_vehicle.license_plate %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @stolen_vehicle.color %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @stolen_vehicle.owner_name %>
+</p>
+
+<p>
+  <strong>Owner phone:</strong>
+  <%= @stolen_vehicle.owner_phone %>
+</p>
+
+<p>
+  <strong>Date add:</strong>
+  <%= @stolen_vehicle.date_add %>
+</p>
+
+<p>
+  <strong>Date remove:</strong>
+  <%= @stolen_vehicle.date_remove %>
+</p>
+
+<p>
+  <strong>Remove by:</strong>
+  <%= @stolen_vehicle.remove_by %>
+</p>
+
+<%= link_to 'Edit', edit_stolen_vehicle_path(@stolen_vehicle) %> |
+<%= link_to 'Back', stolen_vehicles_path %>

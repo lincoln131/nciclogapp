@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+<h1>HPD NCIC LOG</h1>
+<h1>Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th id=ncicNames">|OCA</th>
+      <th id=ncicNames">|Operator</th>
+      <th id=ncicNames">|Officer</th>
+      <th id=ncicNames">|NCIC#</th>
+      <th id=ncicNames">|Make</th>
+      <th id=ncicNames">|Model</th>
+      <th id=ncicNames">|Serial</th>
+      <th id=ncicNames">|Description</th>
+      <th id=ncicNames">|Owner Name</th>
+      <th id=ncicNames">|Owner Phone</th>
+      <th id=ncicNames">|Date Add</th>
+      <th id=ncicNames">|Date Remove</th>
+      <th id=ncicNames">|Removed by?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.oca %></td>
+        <td><%= article.operator_name %></td>
+        <td><%= article.officer_name %></td>
+        <td><%= article.ncic_num %></td>
+        <td><%= article.make %></td>
+        <td><%= article.model %></td>
+        <td><%= article.serial %></td>
+        <td><%= article.description %></td>
+        <td><%= article.owner_name %></td>
+        <td><%= article.owner_phone %></td>
+        <td><%= article.date_add %></td>
+        <td><%= article.date_remove %></td>
+        <td><%= article.remove_by %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+  
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>
+<br>
+<%= link_to 'Home', '/' %>
+
