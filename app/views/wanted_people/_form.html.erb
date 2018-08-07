@@ -13,52 +13,52 @@
 
   <div class="field">
     <%= form.label :oca %>
-    <%= form.text_field :oca, id: :wanted_person_oca , :required => true %>
+    <%= form.text_field :oca, id: :wanted_person_oca , :required => true, :readonly =>wanted_person.oca.present? %>
   </div>
 
   <div class="field">
     <%= form.label :operator_name %>
-    <%= form.text_field :operator_name, id: :wanted_person_operator_name , :required => true %>
+    <%= form.text_field :operator_name, id: :wanted_person_operator_name , :required => true, :readonly =>wanted_person.operator_name.present? %>
   </div>
 
   <div class="field">
     <%= form.label :officer_name %>
-    <%= form.text_field :officer_name, id: :wanted_person_officer_name , :required => true %>
+    <%= form.text_field :officer_name, id: :wanted_person_officer_name , :required => true, :readonly =>wanted_person.officer_name.present? %>
   </div>
 
   <div class="field">
     <%= form.label :ncic_num %>
-    <%= form.text_field :ncic_num, id: :wanted_person_ncic_num , :required => true %>
+    <%= form.text_field :ncic_num, id: :wanted_person_ncic_num , :required => true, :readonly =>wanted_person.ncic_num.present? %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :wanted_person_description , :required => true %>
+    <%= form.text_area :description, id: :wanted_person_description , :required => true, :readonly =>wanted_person.description.present? %>
   </div>
 
   <div class="field">
     <%= form.label :owner_name %>
-    <%= form.text_field :owner_name, id: :wanted_person_owner_name , :required => true %>
+    <%= form.text_field :owner_name, id: :wanted_person_owner_name , :required => true, :readonly =>wanted_person.owner_name.present? %>
   </div>
 
   <div class="field">
     <%= form.label :owner_phone %>
-    <%= form.text_field :owner_phone, id: :wanted_person_owner_phone , :required => true %>
+    <%= form.text_field :owner_phone, id: :wanted_person_owner_phone , :required => true, :readonly =>wanted_person.owner_phone.present? %>
   </div>
 
   <div class="field">
     <%= form.label :date_add %>
-    <%= form.text_field :date_add, id: :wanted_person_date_add , :required => true %>
+    <%= form.text_field :date_add, id: :wanted_person_date_add , :required => true, :readonly =>wanted_person.date_add.present? %>
   </div>
 
   <div class="field">
     <%= form.label :date_remove %>
-    <%= form.text_field :date_remove, id: :wanted_person_date_remove %>
+    <%= form.text_field :date_remove, id: :wanted_person_date_remove, :readonly =>wanted_person.date_remove.present? %>
   </div>
 
   <div class="field">
     <%= form.label :remove_by %>
-    <%= form.text_field :remove_by, id: :wanted_person_remove_by %>
+    <%= form.text_field :remove_by, id: :wanted_person_remove_by, :readonly =>wanted_person.remove_by.present? %>
   </div>
 
   <div class="actions">
