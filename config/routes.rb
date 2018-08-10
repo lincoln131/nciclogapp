@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-	get "/pages/:page" => "pages#show"
+  get "/pages/:page" => "pages#show"
+  get "/articles/:admin" => "admin#show"
   resources :wanted_people
   resources :stolen_vehicles
   resources :recovered_vehicles
