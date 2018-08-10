@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 <h1>HPD NCIC LOG</h1>
-<h1>Vehicle / Boat Parts</h1>
-
+<h1>🔩 Vehicle / Boat Parts</h1>
+<%= link_to 'Main Menu', '/' %>
+<br>
+<br>
+<%= link_to 'New Vehicle Boat Part', new_vehicle_boat_part_path %>
+<br>
+<br>
 <table>
   <thead>
     <tr>
@@ -20,7 +25,7 @@
   </thead>
 
   <tbody>
-    <% @vehicle_boat_parts.each do |vehicle_boat_part| %>
+    <% @vehicle_boat_parts.sort { |a,b| a.date_remove <=> b.date_remove }.each do |vehicle_boat_part| %>
       <tr>
         <td id="ncicNames"><%= vehicle_boat_part.oca %></td>
         <td id="ncicNames"><%= vehicle_boat_part.operator_name %></td>
@@ -40,12 +45,6 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Vehicle Boat Part', new_vehicle_boat_part_path %>
-<br>
-<br>
-<%= link_to 'Home', '/' %>
-<br>
 <br><%= link_to 'Articles', articles_path %> | <%= link_to 'Boats', boats_path %> | <%= link_to 'Guns - Recovered', recovered_guns_path %> | <%= link_to 'Guns - Stolen', stolen_guns_path %> | <%= link_to 'License Plates', license_plates_path %> | <%= link_to 'Missing Persons', missing_people_path %>
 <br> <%= link_to 'Parts - Vehicles / Boats', vehicle_boat_parts_path %> | <%= link_to 'Vehicles - Stolen', stolen_vehicles_path %> | <%= link_to 'Vehicles - Recovered', recovered_vehicles_path %> | <%= link_to 'Securities', securities_path %> | <%= link_to 'Wanted - Persons', wanted_people_path %>
