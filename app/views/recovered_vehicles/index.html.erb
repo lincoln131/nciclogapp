@@ -10,19 +10,19 @@
 <table>
   <thead>
     <tr>
-      <th id="ncicNames">|OCA</th>
-      <th id="ncicNames">|Operator</th>
-      <th id="ncicNames">|Officer</th>
-      <th id="ncicNames">|Year</th>
-      <th id="ncicNames">|Make</th>
-      <th id="ncicNames">|Model</th>
-      <th id="ncicNames">|Vin</th>
-      <th id="ncicNames">|License Plate</th>
-      <th id="ncicNames">|Color</th>
-      <th id="ncicNames">|Wrecker</th>
-      <th id="ncicNames">|Date Added</th>
-      <th id="ncicNames">|Date Removed</th>
-      <th id="ncicNames">|Removed by?</th>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|Year</th>
+      <th>|Make</th>
+      <th>|Model</th>
+      <th>|Vin</th>
+      <th>|License Plate</th>
+      <th>|Color</th>
+      <th>|Wrecker</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Removed by?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,19 +30,19 @@
   <tbody>
     <% @recovered_vehicles.sort { |a,b| a.date_remove <=> b.date_remove }.each do |recovered_vehicle| %>
       <tr>
-        <td id="ncicNames"><%= recovered_vehicle.oca %></td>
-        <td id="ncicNames"><%= recovered_vehicle.operator_name %></td>
-        <td id="ncicNames"><%= recovered_vehicle.officer_name %></td>
-        <td id="ncicNames"><%= recovered_vehicle.year %></td>
-        <td id="ncicNames"><%= recovered_vehicle.make %></td>
-        <td id="ncicNames"><%= recovered_vehicle.model %></td>
-        <td id="ncicNames"><%= recovered_vehicle.vin %></td>
-        <td id="ncicNames"><%= recovered_vehicle.license_plate %></td>
-        <td id="ncicNames"><%= recovered_vehicle.color %></td>
-        <td id="ncicNames"><%= recovered_vehicle.wrecker %></td>
-        <td id="ncicNames"><%= recovered_vehicle.date_add %></td>
-        <td id="ncicNames"><%= recovered_vehicle.date_remove %></td>
-        <td id="ncicNames"><%= recovered_vehicle.remove_by %></td>
+        <td><%= recovered_vehicle.oca %></td>
+        <td><%= recovered_vehicle.operator_name %></td>
+        <td><%= recovered_vehicle.officer_name %></td>
+        <td><%= recovered_vehicle.year %></td>
+        <td><%= recovered_vehicle.make %></td>
+        <td><%= recovered_vehicle.model %></td>
+        <td><%= recovered_vehicle.vin %></td>
+        <td><%= recovered_vehicle.license_plate %></td>
+        <td><%= recovered_vehicle.color %></td>
+        <td><%= recovered_vehicle.wrecker %></td>
+        <td><%= recovered_vehicle.date_add %></td>
+        <td><%= recovered_vehicle.date_remove %></td>
+        <td><%= recovered_vehicle.remove_by %></td>
         <td><%= link_to 'Show', recovered_vehicle %></td>
         <td><%= link_to 'Edit', edit_recovered_vehicle_path(recovered_vehicle) %></td>
 

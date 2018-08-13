@@ -10,20 +10,20 @@
 <table>
   <thead>
     <tr>
-      <th id="ncicNames">|OCA</th>
-      <th id="ncicNames">|Operator</th>
-      <th id="ncicNames">|Officer</th>
-      <th id="ncicNames">|NCIC#</th>
-      <th id="ncicNames">|Make</th>
-      <th id="ncicNames">|Model</th>
-      <th id="ncicNames">|Caliber</th>
-      <th id="ncicNames">|Serial</th>
-      <th id="ncicNames">|Owner Name</th>
-      <th id="ncicNames">|Owner Phone</th>
-      <th id="ncicNames">|Notes</th>
-      <th id="ncicNames">|Date Added</th>
-      <th id="ncicNames">|Date Removed</th>
-      <th id="ncicNames">|Removed by?</th>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|NCIC#</th>
+      <th>|Make</th>
+      <th>|Model</th>
+      <th>|Caliber</th>
+      <th>|Serial</th>
+      <th>|Owner Name</th>
+      <th>|Owner Phone</th>
+      <th>|Notes</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Removed by?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,20 +31,20 @@
   <tbody>
     <% @recovered_guns.sort { |a,b| a.date_remove <=> b.date_remove }.each do |recovered_gun| %>
       <tr>
-        <td id="ncicNames"><%= recovered_gun.oca %></td>
-        <td id="ncicNames"><%= recovered_gun.operator_name %></td>
-        <td id="ncicNames"><%= recovered_gun.officer_name %></td>
-        <td id="ncicNames"><%= recovered_gun.ncic_num %></td>
-        <td id="ncicNames"><%= recovered_gun.make %></td>
-        <td id="ncicNames"><%= recovered_gun.model %></td>
-        <td id="ncicNames"><%= recovered_gun.caliber %></td>
-        <td id="ncicNames"><%= recovered_gun.serial %></td>
-        <td id="ncicNames"><%= recovered_gun.owner_name %></td>
-        <td id="ncicNames"><%= recovered_gun.owner_phone %></td>
-        <td id="ncicNames"><%= recovered_gun.notes %></td>
-        <td id="ncicNames"><%= recovered_gun.date_add %></td>
-        <td id="ncicNames"><%= recovered_gun.date_remove %></td>
-        <td id="ncicNames"><%= recovered_gun.remove_by %></td>
+        <td><%= recovered_gun.oca %></td>
+        <td><%= recovered_gun.operator_name %></td>
+        <td><%= recovered_gun.officer_name %></td>
+        <td><%= recovered_gun.ncic_num %></td>
+        <td><%= recovered_gun.make %></td>
+        <td><%= recovered_gun.model %></td>
+        <td><%= recovered_gun.caliber %></td>
+        <td><%= recovered_gun.serial %></td>
+        <td><%= recovered_gun.owner_name %></td>
+        <td><%= recovered_gun.owner_phone %></td>
+        <td><%= recovered_gun.notes %></td>
+        <td><%= recovered_gun.date_add %></td>
+        <td><%= recovered_gun.date_remove %></td>
+        <td><%= recovered_gun.remove_by %></td>
         <td><%= link_to 'Show', recovered_gun %></td>
         <td><%= link_to 'Edit', edit_recovered_gun_path(recovered_gun) %></td>
 

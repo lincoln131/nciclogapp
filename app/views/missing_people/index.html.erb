@@ -10,20 +10,20 @@
 <table>
   <thead>
     <tr>
-      <th id="ncicNames">|OCA</th>
-      <th id="ncicNames">|Operator</th>
-      <th id="ncicNames">|Officer</th>
-      <th id="ncicNames">|NCIC#</th>
-      <th id="ncicNames">|Missing First Name</th>
-      <th id="ncicNames">|Missing Last Name</th>
-      <th id="ncicNames">|Missing DOB</th>
-      <th id="ncicNames">|Missing Race</th>
-      <th id="ncicNames">|Missing Sex</th>
-      <th id="ncicNames">|Contact Name</th>
-      <th id="ncicNames">|Contact Phone</th>
-      <th id="ncicNames">|Date Added</th>
-      <th id="ncicNames">|Date Removed</th>
-      <th id="ncicNames">|Removed by?</th>
+      <th>|OCA</th>
+      <th>|Operator</th>
+      <th>|Officer</th>
+      <th>|NCIC#</th>
+      <th>|Missing First Name</th>
+      <th>|Missing Last Name</th>
+      <th>|Missing DOB</th>
+      <th>|Missing Race</th>
+      <th>|Missing Sex</th>
+      <th>|Contact Name</th>
+      <th>|Contact Phone</th>
+      <th>|Date Added</th>
+      <th>|Date Removed</th>
+      <th>|Removed by?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,20 +31,20 @@
   <tbody>
     <% @missing_people.sort { |a,b| a.date_remove <=> b.date_remove }.each do |missing_person| %>
       <tr>
-        <td id="ncicNames"><%= missing_person.oca %></td>
-        <td id="ncicNames"><%= missing_person.operator_name %></td>
-        <td id="ncicNames"><%= missing_person.officer_name %></td>
-        <td id="ncicNames"><%= missing_person.ncic_num %></td>
-        <td id="ncicNames"><%= missing_person.missing_f_name %></td>
-        <td id="ncicNames"><%= missing_person.missing_l_name %></td>
-        <td id="ncicNames"><%= missing_person.missing_dob %></td>
-        <td id="ncicNames"><%= missing_person.missing_race %></td>
-        <td id="ncicNames"><%= missing_person.missing_sex %></td>
-        <td id="ncicNames"><%= missing_person.owner_name %></td>
-        <td id="ncicNames"><%= missing_person.owner_phone %></td>
-        <td id="ncicNames"><%= missing_person.date_add %></td>
-        <td id="ncicNames"><%= missing_person.date_remove %></td>
-        <td id="ncicNames"><%= missing_person.remove_by %></td>
+        <td><%= missing_person.oca %></td>
+        <td><%= missing_person.operator_name %></td>
+        <td><%= missing_person.officer_name %></td>
+        <td><%= missing_person.ncic_num %></td>
+        <td><%= missing_person.missing_f_name %></td>
+        <td><%= missing_person.missing_l_name %></td>
+        <td><%= missing_person.missing_dob %></td>
+        <td><%= missing_person.missing_race %></td>
+        <td><%= missing_person.missing_sex %></td>
+        <td><%= missing_person.owner_name %></td>
+        <td><%= missing_person.owner_phone %></td>
+        <td><%= missing_person.date_add %></td>
+        <td><%= missing_person.date_remove %></td>
+        <td><%= missing_person.remove_by %></td>
         <td><%= link_to 'Show', missing_person %></td>
         <td><%= link_to 'Edit', edit_missing_person_path(missing_person) %></td>
 
