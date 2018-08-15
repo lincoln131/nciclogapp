@@ -31,15 +31,15 @@ Boats only. No hoes, please. 👍 <br> <br>
 
     	<tr>
         <td><%= boat.oca %></td>
-        <td><%= boat.operator_name %></td>
-        <td><%= boat.officer_name %></td>
+        <td><%= boat.operator_name.titleize %></td>
+        <td><%= boat.officer_name.titleize %></td>
         <td><%= boat.ncic_num %></td>
-        <td><%= boat.description %></td>
-        <td><%= boat.owner_name %></td>
+        <td><%= boat.description.titleize %></td>
+        <td><%= boat.owner_name.titleize %></td>
         <td><%= boat.owner_phone %></td>
         <td><%= boat.date_add %></td>
         <td><%= boat.date_remove %></td>
-        <td><%= boat.remove_by %></td>
+        <td><%= boat.remove_by.titleize %></td>
         <td><%= link_to 'Show', boat %></td>
         <td><%= link_to 'Edit', edit_boat_path(boat) %></td>
 

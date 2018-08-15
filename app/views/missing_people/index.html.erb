@@ -32,19 +32,19 @@
     <% @missing_people.sort { |a,b| a.date_remove <=> b.date_remove }.each do |missing_person| %>
       <tr>
         <td><%= missing_person.oca %></td>
-        <td><%= missing_person.operator_name %></td>
-        <td><%= missing_person.officer_name %></td>
+        <td><%= missing_person.operator_name.titleize %></td>
+        <td><%= missing_person.officer_name.titleize %></td>
         <td><%= missing_person.ncic_num %></td>
-        <td><%= missing_person.missing_f_name %></td>
-        <td><%= missing_person.missing_l_name %></td>
+        <td><%= missing_person.missing_f_name.titleize %></td>
+        <td><%= missing_person.missing_l_name.titleize %></td>
         <td><%= missing_person.missing_dob %></td>
         <td><%= missing_person.missing_race %></td>
         <td><%= missing_person.missing_sex %></td>
-        <td><%= missing_person.owner_name %></td>
+        <td><%= missing_person.owner_name.titleize %></td>
         <td><%= missing_person.owner_phone %></td>
         <td><%= missing_person.date_add %></td>
         <td><%= missing_person.date_remove %></td>
-        <td><%= missing_person.remove_by %></td>
+        <td><%= missing_person.remove_by.titleize %></td>
         <td><%= link_to 'Show', missing_person %></td>
         <td><%= link_to 'Edit', edit_missing_person_path(missing_person) %></td>
 
