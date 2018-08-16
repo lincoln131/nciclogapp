@@ -28,7 +28,7 @@
   <tbody>
     <% @license_plates.sort { |a,b| a.date_remove <=> b.date_remove }.each do |license_plate| %>
       <tr>
-        <td><%= license_plate.oca %></td>
+        <td id="oca"><%= license_plate.oca %></td>
         <td><%= license_plate.operator_name.titleize %></td>
         <td><%= license_plate.officer_name.titleize %></td>
         <td><%= license_plate.ncic_num %></td>
@@ -39,8 +39,8 @@
         <td><%= license_plate.date_add %></td>
         <td><%= license_plate.date_remove %></td>
         <td><%= license_plate.remove_by.titleize %></td>
-        <td><%= link_to 'Show', license_plate %></td>
-        <td><%= link_to 'Edit', edit_license_plate_path(license_plate) %></td>
+        <td id="smaller"><%= link_to 'Show', license_plate %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_license_plate_path(license_plate) %></td>
 
       </tr>
     <% end %>

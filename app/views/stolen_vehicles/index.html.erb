@@ -32,7 +32,7 @@
   <tbody>
     <% @stolen_vehicles.sort { |a,b| a.date_remove <=> b.date_remove }.each do |stolen_vehicle| %>
       <tr>
-        <td><%= stolen_vehicle.oca %></td>
+        <td id="oca"><%= stolen_vehicle.oca %></td>
         <td><%= stolen_vehicle.operator_name.titleize %></td>
         <td><%= stolen_vehicle.officer_name.titleize %></td>
         <td><%= stolen_vehicle.ncic_num %></td>
@@ -47,8 +47,8 @@
         <td><%= stolen_vehicle.date_add %></td>
         <td><%= stolen_vehicle.date_remove %></td>
         <td><%= stolen_vehicle.remove_by.titleize %></td>
-        <td><%= link_to 'Show', stolen_vehicle %></td>
-        <td><%= link_to 'Edit', edit_stolen_vehicle_path(stolen_vehicle) %></td>
+        <td id="smaller"><%= link_to 'Show', stolen_vehicle %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_stolen_vehicle_path(stolen_vehicle) %></td>
 
       </tr>
     <% end %>

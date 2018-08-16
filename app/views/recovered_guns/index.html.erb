@@ -31,7 +31,7 @@
   <tbody>
     <% @recovered_guns.sort { |a,b| a.date_remove <=> b.date_remove }.each do |recovered_gun| %>
       <tr>
-        <td><%= recovered_gun.oca %></td>
+        <td id="oca"><%= recovered_gun.oca %></td>
         <td><%= recovered_gun.operator_name.titleize %></td>
         <td><%= recovered_gun.officer_name.titleize %></td>
         <td><%= recovered_gun.ncic_num %></td>
@@ -45,8 +45,8 @@
         <td><%= recovered_gun.date_add %></td>
         <td><%= recovered_gun.date_remove %></td>
         <td><%= recovered_gun.remove_by.titleize %></td>
-        <td><%= link_to 'Show', recovered_gun %></td>
-        <td><%= link_to 'Edit', edit_recovered_gun_path(recovered_gun) %></td>
+        <td id="smaller"><%= link_to 'Show', recovered_gun %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_recovered_gun_path(recovered_gun) %></td>
 
       </tr>
     <% end %>

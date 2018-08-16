@@ -27,7 +27,7 @@
   <tbody>
     <% @vehicle_boat_parts.sort { |a,b| a.date_remove <=> b.date_remove }.each do |vehicle_boat_part| %>
       <tr>
-        <td><%= vehicle_boat_part.oca %></td>
+        <td id="oca"><%= vehicle_boat_part.oca %></td>
         <td><%= vehicle_boat_part.operator_name.titleize %></td>
         <td><%= vehicle_boat_part.officer_name.titleize %></td>
         <td><%= vehicle_boat_part.ncic_num %></td>
@@ -37,8 +37,8 @@
         <td><%= vehicle_boat_part.date_add %></td>
         <td><%= vehicle_boat_part.date_remove %></td>
         <td><%= vehicle_boat_part.remove_by.titleize %></td>
-        <td><%= link_to 'Show', vehicle_boat_part %></td>
-        <td><%= link_to 'Edit', edit_vehicle_boat_part_path(vehicle_boat_part) %></td>
+        <td id="smaller"><%= link_to 'Show', vehicle_boat_part %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_vehicle_boat_part_path(vehicle_boat_part) %></td>
 
       </tr>
     <% end %>

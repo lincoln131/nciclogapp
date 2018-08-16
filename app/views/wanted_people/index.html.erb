@@ -27,7 +27,7 @@
   <tbody>
     <% @wanted_people.sort { |a,b| a.date_remove <=> b.date_remove }.each do |wanted_person| %>
       <tr>
-        <td><%= wanted_person.oca %></td>
+        <td id="oca"><%= wanted_person.oca %></td>
         <td><%= wanted_person.operator_name.titleize %></td>
         <td><%= wanted_person.officer_name.titleize %></td>
         <td><%= wanted_person.ncic_num %></td>
@@ -37,8 +37,8 @@
         <td><%= wanted_person.date_add %></td>
         <td><%= wanted_person.date_remove %></td>
         <td><%= wanted_person.remove_by.titleize %></td>
-        <td><%= link_to 'Show', wanted_person %></td>
-        <td><%= link_to 'Edit', edit_wanted_person_path(wanted_person) %></td>
+        <td id="smaller"><%= link_to 'Show', wanted_person %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_wanted_person_path(wanted_person) %></td>
 
       </tr>
     <% end %>
