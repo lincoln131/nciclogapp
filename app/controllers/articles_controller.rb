@@ -1,6 +1,12 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+  # Attempt to Check if Removed
+  def ncic_removed
+    @articles.date_remove.present?
+  end
+
+
   # GET /articles
   # GET /articles.json
   def index
