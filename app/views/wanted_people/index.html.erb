@@ -38,8 +38,10 @@
         <td><%= wanted_person.date_add %></td>
         <td><%= wanted_person.date_remove %></td>
         <td><%= wanted_person.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', wanted_person %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_wanted_person_path(wanted_person) %></td>
+        <td id="smaller"><%= link_to 'View', wanted_person %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_wanted_person_path(wanted_person) if wanted_person.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>

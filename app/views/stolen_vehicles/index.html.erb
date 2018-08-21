@@ -48,8 +48,10 @@
         <td><%= stolen_vehicle.date_add %></td>
         <td><%= stolen_vehicle.date_remove %></td>
         <td><%= stolen_vehicle.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', stolen_vehicle %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_stolen_vehicle_path(stolen_vehicle) %></td>
+        <td id="smaller"><%= link_to 'View', stolen_vehicle %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_stolen_vehicle_path(stolen_vehicle) if stolen_vehicle.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>

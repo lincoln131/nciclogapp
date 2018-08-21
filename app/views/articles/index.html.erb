@@ -45,8 +45,10 @@
         <td><%= article.date_add %></td>
         <td><%= article.date_remove %></td>
         <td><%= article.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', article %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td id="smaller"><%= link_to 'View', article %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_article_path(article) if article.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
        </tr>
     <% end %>
   </tbody>

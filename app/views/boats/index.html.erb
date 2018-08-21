@@ -39,8 +39,10 @@ Boats only! No hoes, please. 👍 <br> <br>
         <td><%= boat.date_add %></td>
         <td><%= boat.date_remove %></td>
         <td><%= boat.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', boat %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_boat_path(boat) %></td>
+        <td id="smaller"><%= link_to 'View', boat %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_boat_path(boat) if boat.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>

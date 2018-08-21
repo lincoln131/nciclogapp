@@ -40,8 +40,10 @@
         <td><%= license_plate.date_add %></td>
         <td><%= license_plate.date_remove %></td>
         <td><%= license_plate.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', license_plate %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_license_plate_path(license_plate) %></td>
+        <td id="smaller"><%= link_to 'View', license_plate %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_license_plate_path(license_plate) if license_plate.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>

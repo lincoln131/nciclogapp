@@ -38,8 +38,10 @@
         <td><%= security.date_add %></td>
         <td><%= security.date_remove %></td>
         <td><%= security.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', security %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_security_path(security) %></td>
+        <td id="smaller"><%= link_to 'View', security %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_security_path(security) if security.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>

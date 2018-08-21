@@ -46,8 +46,10 @@
         <td><%= stolen_gun.date_add %></td>
         <td><%= stolen_gun.date_remove %></td>
         <td><%= stolen_gun.remove_by.titleize %></td>
-        <td id="smaller"><%= link_to 'Show', stolen_gun %></td>
-        <td id="smaller"><%= link_to 'Edit', edit_stolen_gun_path(stolen_gun) %></td>
+        <td id="smaller"><%= link_to 'View', stolen_gun %></td>
+        <td id="smaller"><%= link_to 'Edit', edit_stolen_gun_path(stolen_gun) if stolen_gun.date_remove.empty? %></td>
+        <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>
