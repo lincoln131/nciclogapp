@@ -95,3 +95,16 @@ div {
 label {
   display: block;
 }
+.new {
+  color: #008719;
+}
+.cleared {
+  color: #b7b7b7;
+  text-decoration: line-through solid rgb(68, 68, 68);
+}
+#smaller {
+  min-width: 40px;
+}
+#oca {
+  min-width: 75px;
+}

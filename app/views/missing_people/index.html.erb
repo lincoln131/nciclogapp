@@ -30,7 +30,11 @@
 
   <tbody>
     <% @missing_people.sort { |a,b| a.date_remove <=> b.date_remove }.each do |missing_person| %>
-      <tr>
+      <% if missing_person.date_remove.present? %>
+        <tr class = "cleared">
+      <% elsif missing_person.created_at > DateTime.now.in_time_zone.midnight %>
+        <tr class = "new">
+      <% end %>
         <td id="oca"><%= missing_person.oca %></td>
         <td><%= missing_person.operator_name.titleize %></td>
         <td><%= missing_person.officer_name.titleize %></td>

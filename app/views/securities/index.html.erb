@@ -26,7 +26,11 @@
 
   <tbody>
     <% @securities.sort { |a,b| a.date_remove <=> b.date_remove }.each do |security| %>
-      <tr>
+      <% if security.date_remove.present? %>
+        <tr class = "cleared">
+      <% elsif security.created_at > DateTime.now.in_time_zone.midnight %>
+        <tr class = "new">
+      <% end %>
         <td id="oca"><%= security.oca %></td>
         <td><%= security.operator_name.titleize %></td>
         <td><%= security.officer_name.titleize %></td>
