@@ -1,10 +1,7 @@
 <p id="notice"><%= notice %></p>
-<h1>HPD NCIC LOG</h1>
-<h1>🚗 Recovered Vehicles</h1>
-<%= link_to 'Main Menu', '/pages/about' %>
-<br>
-<br>
-<%= link_to 'New Recovered Vehicle', new_recovered_vehicle_path %>
+<h1> <%= link_to 'HPD NCIC LOG', '/pages/about', class: "invisLink" %></h1>
+<h1> <%= link_to '🚗 Recovered Vehicles', new_recovered_vehicle_path, class: "invisLink" %></h1>
+<%= link_to 'New Recovered Vehicle', new_recovered_vehicle_path, class: "myButton" %>
 <br>
 <br>
 <table>

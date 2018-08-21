@@ -23,7 +23,7 @@ a {
   color: #000;
 
   &:visited {
-    color: #666;
+    color: #000;
   }
 
   &:hover {
@@ -107,4 +107,32 @@ label {
 }
 #oca {
   min-width: 75px;
+}
+.myButton {
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: #fff;
+  font-size: 16px; 
+  line-height: 16px; 
+  padding: 6px; 
+  border-radius: 10px; 
+  font-weight: normal; 
+  text-decoration: none; 
+  font-style: normal; 
+  font-variant: normal; 
+  text-transform: none; 
+  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+border: 2px solid rgb(28, 110, 164); 
+  display: inline-block;
+}
+  .myButton:hover {
+  background: #1C6EA4; 
+}
+  .myButton:active {
+  background: rgb(255, 255, 255); 
+}
+.myButton:visited {
+ color: #fff;
+  }
+.invisLink{
+  text-decoration: none 
 }
