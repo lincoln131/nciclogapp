@@ -27,7 +27,7 @@
   </thead>
 
   <tbody>
-    <% @stolen_vehicles.sort { |a,b| a.date_remove <=> b.date_remove }.each do |stolen_vehicle| %>
+    <% @stolen_vehicles.order(date_remove: :asc, created_at: :desc).each do |stolen_vehicle| %>
       <% if stolen_vehicle.date_remove.present? %>
         <tr class = "cleared">
       <% elsif stolen_vehicle.created_at > DateTime.now.in_time_zone.midnight %>

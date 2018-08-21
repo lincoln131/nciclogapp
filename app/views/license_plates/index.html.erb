@@ -23,7 +23,7 @@
   </thead>
 
   <tbody>
-    <% @license_plates.sort { |a,b| a.date_remove <=> b.date_remove }.each do |license_plate| %>
+    <% @license_plates.order(date_remove: :asc, created_at: :desc).each do |license_plate| %>
       <% if license_plate.date_remove.present? %>
         <tr class = "cleared">
       <% elsif license_plate.created_at > DateTime.now.in_time_zone.midnight %>
