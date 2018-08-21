@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #add route for my fancy page
   get "/pages/:page" => "pages#show"
   resources :wanted_people
   resources :stolen_vehicles
@@ -11,6 +12,6 @@ Rails.application.routes.draw do
   resources :recovered_guns
   resources :boats
   resources :articles
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	root "pages#show", page: "index"
+  #make my fancy page show up as index
+  root "pages#show", page: "index"
 end

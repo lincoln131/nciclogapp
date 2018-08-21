@@ -1,3 +1,4 @@
+<%# All other _form.html.erb files follow same conventions for their respective fields %>
 <%= form_with(model: article, local: true) do |form| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +15,7 @@
 
   <div class="field">
     <%= form.label :oca %>
-    <%= form.text_field :oca, id: :article_oca , :required => true, :readonly => article.oca.present? %>
+    <%= form.text_field :oca, id: :article_oca , :required => true, :readonly => article.oca.present? %> <%# required tag, also checks to see if there is data in field, if so, read only %>
   </div>
 
   <div class="field">
@@ -69,7 +70,7 @@
 
   <div class="field">
     <%= form.label :date_remove %>
-    <%= form.text_field :date_remove, id: :article_date_remove, :readonly => article.date_remove.present? %>
+    <%= form.text_field :date_remove, id: :article_date_remove, :readonly => article.date_remove.present? %><%# This and below div aren't required at first %>
   </div>
 
   <div class="field">

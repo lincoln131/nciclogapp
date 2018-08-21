@@ -1,4 +1,6 @@
-body {
+/* CSS For NCIC LOG
+ */
+  body {
   background-color: #fff;
   color: #333;
   margin: 33px;
@@ -19,6 +21,8 @@ pre {
   font-size: 11px;
 }
 
+/* I wanted Links to stay the same color after having been clicked
+ */
 a {
   color: #000;
 
@@ -37,6 +41,8 @@ th {
   border-bottom: 2px solid #888;
   text-align:left;
   padding:0px 5px 0px 5px;
+  /* Custom Color for the Table Header Bar
+  */
   background-color:rgb(136, 204, 255);
 }
 
@@ -47,10 +53,6 @@ td {
   padding:0px 5px 0px 5px;
   max-width: 450px;
   
-}
-
-cleared {
-  color: #fff;
 }
 
 div {
@@ -95,19 +97,34 @@ div {
 label {
   display: block;
 }
+
+/* Views check if creation date has been since midnight of the current day.
+ */
 .new {
   color: #008719;
 }
+
+/* Grey and strikethrough for things already cleared.
+ */
 .cleared {
   color: #b7b7b7;
   text-decoration: line-through solid rgb(68, 68, 68);
 }
+
+/* Make things smaller
+ */
 #smaller {
   min-width: 40px;
 }
+
+/* Make Sure OCA fits
+ */
 #oca {
   min-width: 75px;
 }
+
+/* make a button for the new records
+ */
 .myButton {
   font-family: verdana, arial, helvetica, sans-serif;
   color: #fff;
@@ -133,6 +150,9 @@ border: 2px solid rgb(28, 110, 164);
 .myButton:visited {
  color: #fff;
   }
+
+ /* I dont want underlines under some links
+ */
 .invisLink{
   text-decoration: none 
 }
