@@ -159,4 +159,10 @@ border: 2px solid rgb(28, 110, 164);
 .invisLink{
   text-decoration: none 
 }
+
+img.image {
+  max-width: 500px;
+  max-height: 500px;
+  object-fit: contain;
+}
  

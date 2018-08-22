@@ -1,9 +1,16 @@
 <html>
-<h1 style="text-align: center;"><%= link_to '🚓NCIC🚨LOG🚓', '/pages/main' %></h1>
-<h3 style="text-align: center;"><%= link_to 'For All Your Logging Needs!', '/pages/main' %></h3>
+<h1 style="text-align: center;"><%= link_to '🚓NCIC🚨LOG🚓', '/pages/index', class: "invisLink"  %></h1>
+<h3 style="text-align: center;"><%= link_to 'For All Your Logging Needs!', '/pages/index', class: "invisLink"  %></h3>
 <p style="text-align: center;">This was created of a few days while I was learning Rails.</p>
-<h3 style="text-align: center;">
+<p style="text-align: center;">Here is a fun picture for you to enjoy.</p>
+<%  
+    i = ["asst.png","fancy.png","log.png","patch.png","shoulder.png","tooth.png","thanks.png","preacher.png","jonah.gif","dogsmile.gif","monkeypute.gif"]
+    r = Random.new
+    r = r.rand(i.length)
+    i = i[r]
+%>
 
-<p style="text-align: center;">v1.7 2018</p>
+<h3 style="text-align: center;"><%=image_tag( i ,class: 'image' )%>
+<p style="text-align: center;"><%= link_to '💩v1.7 2018', '/pages/index' , class: "invisLink" %></p>
 
 </html>
