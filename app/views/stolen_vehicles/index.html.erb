@@ -20,8 +20,8 @@
       <th>Owner Name</th>
       <th>Owner Phone</th>
       <th>Date Added</th>
-      <th>Date Removed</th>
-      <th>Remove by</th>
+      <th>Date Rem?</th>
+      <th>Remove by?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,17 +34,17 @@
         <tr class = "new">
       <% end %>
         <td id="oca"><%= stolen_vehicle.oca %></td>
-        <td><%= stolen_vehicle.operator_name.titleize %></td>
-        <td><%= stolen_vehicle.officer_name.titleize %></td>
-        <td><%= stolen_vehicle.ncic_num %></td>
-        <td><%= stolen_vehicle.year %></td>
-        <td><%= stolen_vehicle.make %></td>
-        <td><%= stolen_vehicle.model %></td>
+        <td id="notTooBig"><%= stolen_vehicle.operator_name.titleize %></td>
+        <td id="notTooBig"><%= stolen_vehicle.officer_name.titleize %></td>
+        <td id="notTooBig"><%= stolen_vehicle.ncic_num %></td>
+        <td id="notTooBig"><%= stolen_vehicle.year %></td>
+        <td id="notTooBig"><%= stolen_vehicle.make %></td>
+        <td id="notTooBig"><%= stolen_vehicle.model %></td>
         <td><%= stolen_vehicle.vin %></td>
-        <td><%= stolen_vehicle.license_plate %></td>
-        <td><%= stolen_vehicle.color %></td>
-        <td><%= stolen_vehicle.owner_name.titleize %></td>
-        <td><%= stolen_vehicle.owner_phone.titleize %></td>
+        <td id="notTooBig"><%= stolen_vehicle.license_plate %></td>
+        <td id="notTooBig"><%= stolen_vehicle.color %></td>
+        <td id="notTooBig"><%= stolen_vehicle.owner_name.titleize %></td>
+        <td id="notTooBig"><%= stolen_vehicle.owner_phone.titleize %></td>
         <td><%= stolen_vehicle.date_add %></td>
         <td><%= stolen_vehicle.date_remove %></td>
         <td><%= stolen_vehicle.remove_by.titleize %></td>
@@ -59,5 +59,5 @@
 </table>
 
 
-<br><%= link_to '🚽Articles', articles_path %> | <%= link_to '🛥️Boats', boats_path %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path %> | <%= link_to '🚘License Plates', license_plates_path %> | <%= link_to '😕Missing Persons', missing_people_path %>
-<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path %> | <%= link_to '💲Securities', securities_path %> | <%= link_to '😢Wanted - Persons', wanted_people_path %>
+<br><%= link_to '🚽Articles', articles_path, class: "invisLink"  %> | <%= link_to '🛥️Boats', boats_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path, class: "invisLink"  %> | <%= link_to '🚘License Plates', license_plates_path, class: "invisLink"  %> | <%= link_to '😕Missing Persons', missing_people_path, class: "invisLink"  %>
+<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path, class: "invisLink"  %> | <%= link_to '💲Securities', securities_path, class: "invisLink"  %> | <%= link_to '😢Wanted - Persons', wanted_people_path, class: "invisLink"  %>

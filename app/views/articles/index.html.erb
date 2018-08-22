@@ -19,7 +19,7 @@
       <th>Owner Name</th>
       <th>Owner Phone</th>
       <th>Date Add</th>
-      <th>Date Remove</th>
+      <th>Date Rem?</th>
       <th>Removed by?</th>
       <th colspan="3"></th>
     </tr>
@@ -33,18 +33,18 @@
         <tr class = "new">
       <% end %>
         <td id="oca"><%= article.oca %></td>
-        <td><%= article.operator_name.titleize %></td>
-        <td><%= article.officer_name.titleize %></td>
-        <td><%= article.ncic_num %></td>
-        <td><%= article.make %></td>
-        <td><%= article.model %></td>
-        <td><%= article.serial %></td>
+        <td id="notTooBig"><%= article.operator_name.titleize %></td>
+        <td id="notTooBig"><%= article.officer_name.titleize %></td>
+        <td id="notTooBig"><%= article.ncic_num %></td>
+        <td id="notTooBig"><%= article.make %></td>
+        <td id="notTooBig"><%= article.model %></td>
+        <td id="notTooBig"><%= article.serial %></td>
         <td><%= article.description.titleize %></td>
-        <td><%= article.owner_name.titleize %></td>
-        <td><%= article.owner_phone.titleize %></td>
-        <td><%= article.date_add %></td>
-        <td><%= article.date_remove %></td>
-        <td><%= article.remove_by.titleize %></td>
+        <td id="notTooBig"><%= article.owner_name.titleize %></td>
+        <td id="notTooBig"><%= article.owner_phone.titleize %></td>
+        <td id="notTooBig"><%= article.date_add %></td>
+        <td id="notTooBig"><%= article.date_remove %></td>
+        <td id="notTooBig"><%= article.remove_by.titleize %></td>
         <td id="smaller"><%= link_to 'View', article %></td>
         <td id="smaller"><%= link_to 'Edit', edit_article_path(article) if article.date_remove.empty? %></td>
         <%# <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -55,5 +55,5 @@
 </table>
 
 <%# Quick Links, not sure if I'll keep them %>
-<br><%= link_to '🚽Articles', articles_path %> | <%= link_to '🛥️Boats', boats_path %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path %> | <%= link_to '🚘License Plates', license_plates_path %> | <%= link_to '😕Missing Persons', missing_people_path %>
-<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path %> | <%= link_to '💲Securities', securities_path %> | <%= link_to '😢Wanted - Persons', wanted_people_path %>
+<br><%= link_to '🚽Articles', articles_path, class: "invisLink"  %> | <%= link_to '🛥️Boats', boats_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path, class: "invisLink"  %> | <%= link_to '🚘License Plates', license_plates_path, class: "invisLink"  %> | <%= link_to '😕Missing Persons', missing_people_path, class: "invisLink"  %>
+<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path, class: "invisLink"  %> | <%= link_to '💲Securities', securities_path, class: "invisLink"  %> | <%= link_to '😢Wanted - Persons', wanted_people_path, class: "invisLink"  %>

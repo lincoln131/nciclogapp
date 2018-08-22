@@ -36,7 +36,7 @@
         <td><%= recovered_gun.operator_name.titleize %></td>
         <td><%= recovered_gun.officer_name.titleize %></td>
         <td><%= recovered_gun.ncic_num %></td>
-        <td><%= recovered_gun.make %></td>
+        <td id="notTooBig"><%= recovered_gun.make %></td>
         <td><%= recovered_gun.model %></td>
         <td><%= recovered_gun.caliber %></td>
         <td><%= recovered_gun.serial %></td>
@@ -56,6 +56,5 @@
   </tbody>
 </table>
 
-
-<br><%= link_to '🚽Articles', articles_path %> | <%= link_to '🛥️Boats', boats_path %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path %> | <%= link_to '🚘License Plates', license_plates_path %> | <%= link_to '😕Missing Persons', missing_people_path %>
-<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path %> | <%= link_to '💲Securities', securities_path %> | <%= link_to '😢Wanted - Persons', wanted_people_path %>
+<br><%= link_to '🚽Articles', articles_path, class: "invisLink"  %> | <%= link_to '🛥️Boats', boats_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path, class: "invisLink"  %> | <%= link_to '🚘License Plates', license_plates_path, class: "invisLink"  %> | <%= link_to '😕Missing Persons', missing_people_path, class: "invisLink"  %>
+<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path, class: "invisLink"  %> | <%= link_to '💲Securities', securities_path, class: "invisLink"  %> | <%= link_to '😢Wanted - Persons', wanted_people_path, class: "invisLink"  %>

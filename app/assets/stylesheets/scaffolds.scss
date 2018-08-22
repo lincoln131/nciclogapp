@@ -7,6 +7,7 @@
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+
 }
 
 p, ol, ul, td {
@@ -53,6 +54,7 @@ td {
   text-align:left;
   padding:0px 5px 0px 5px;
   max-width: 450px;
+  text-decoration: none;
   
 }
 
@@ -110,6 +112,7 @@ label {
  */
 .cleared {
   color: #b7b7b7;
+  text-decoration: none;
   /*  text-decoration: line-through solid #b7b7b7;
    */
 }
@@ -117,6 +120,10 @@ label {
 /* Make things smaller
  */
 #smaller {
+  min-width: 40px;
+}
+#notTooBig {
+  max-width: 125px;
   min-width: 40px;
 }
 
@@ -158,6 +165,10 @@ border: 2px solid rgb(28, 110, 164);
  */
 .invisLink{
   text-decoration: none 
+}
+.invisLinkRow{
+  text-decoration: none;
+  color: #b7b7b7; 
 }
 
 img.image {
