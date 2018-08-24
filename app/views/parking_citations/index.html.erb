@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Parking Citations</h1>
-
+<h1> <%= link_to 'HPD CITATION LOG', '/pages/citationMenu', class: "invisLink" %></h1>
+<h1> <%= link_to 'Parking Citations', new_parking_citation_path, class: "invisLink" %></h1>
+<%= link_to 'New Parking Citation', new_parking_citation_path, class: "myButton" %>
 <table>
   <thead>
     <tr>
@@ -38,6 +38,5 @@
   </tbody>
 </table>
 
-<br>
+<br><%= link_to 'State', state_citations_path, class: "invisLink"  %> | <%= link_to 'Warning', warning_citations_path, class: "invisLink"  %> | <%= link_to 'Parking', parking_citations_path, class: "invisLink"  %> | <%= link_to 'Civil', civil_citations_path, class: "invisLink"  %> |<%= link_to 'Code', code_citations_path, class: "invisLink"  %>
 
-<%= link_to 'New Parking Citation', new_parking_citation_path %>
