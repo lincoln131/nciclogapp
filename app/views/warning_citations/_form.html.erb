@@ -1,0 +1,62 @@
+<%= form_with(model: warning_citation, local: true) do |form| %>
+  <% if warning_citation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(warning_citation.errors.count, "error") %> prohibited this warning_citation from being saved:</h2>
+
+      <ul>
+      <% warning_citation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :book_num %>
+    <%= form.text_field :book_num, id: :warning_citation_book_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issued_to %>
+    <%= form.text_field :issued_to, id: :warning_citation_issued_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_c_num %>
+    <%= form.text_field :start_c_num, id: :warning_citation_start_c_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_c_num %>
+    <%= form.text_field :end_c_num, id: :warning_citation_end_c_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issue_date %>
+    <%= form.text_field :issue_date, id: :warning_citation_issue_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issue_by %>
+    <%= form.text_field :issue_by, id: :warning_citation_issue_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :return_date %>
+    <%= form.text_field :return_date, id: :warning_citation_return_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :return_by %>
+    <%= form.text_area :return_by, id: :warning_citation_return_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empty %>
+    <%= form.text_field :empty, id: :warning_citation_empty %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

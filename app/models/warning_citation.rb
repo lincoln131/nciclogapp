@@ -1,0 +1,2 @@
+class WarningCitation < ApplicationRecord
+end

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book num:</strong>
+  <%= @warning_citation.book_num %>
+</p>
+
+<p>
+  <strong>Issued to:</strong>
+  <%= @warning_citation.issued_to %>
+</p>
+
+<p>
+  <strong>Start c num:</strong>
+  <%= @warning_citation.start_c_num %>
+</p>
+
+<p>
+  <strong>End c num:</strong>
+  <%= @warning_citation.end_c_num %>
+</p>
+
+<p>
+  <strong>Issue date:</strong>
+  <%= @warning_citation.issue_date %>
+</p>
+
+<p>
+  <strong>Issue by:</strong>
+  <%= @warning_citation.issue_by %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @warning_citation.return_date %>
+</p>
+
+<p>
+  <strong>Return by:</strong>
+  <%= @warning_citation.return_by %>
+</p>
+
+<p>
+  <strong>Empty:</strong>
+  <%= @warning_citation.empty %>
+</p>
+
+<%= link_to 'Edit', edit_warning_citation_path(@warning_citation) %> |
+<%= link_to 'Back', warning_citations_path %>

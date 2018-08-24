@@ -1,0 +1,2 @@
+class CodeCitation < ApplicationRecord
+end

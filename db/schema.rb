@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180824202312) do
+ActiveRecord::Schema.define(version: 20180824203613) do
 
   create_table "articles", force: :cascade do |t|
     t.string "oca"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20180824202312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "civil_citaions", force: :cascade do |t|
+  create_table "civil_citations", force: :cascade do |t|
     t.string "book_num"
     t.string "issued_to"
     t.string "start_c_num"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20180824202312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "code_citaions", force: :cascade do |t|
+  create_table "code_citations", force: :cascade do |t|
     t.string "book_num"
     t.string "issued_to"
     t.string "start_c_num"
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(version: 20180824202312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "parking_citaions", force: :cascade do |t|
+  create_table "parking_citations", force: :cascade do |t|
     t.string "book_num"
     t.string "issued_to"
     t.string "start_c_num"
@@ -174,7 +174,7 @@ ActiveRecord::Schema.define(version: 20180824202312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "state_citaions", force: :cascade do |t|
+  create_table "state_citations", force: :cascade do |t|
     t.string "book_num"
     t.string "issued_to"
     t.string "start_c_num"
@@ -257,7 +257,7 @@ ActiveRecord::Schema.define(version: 20180824202312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "warning_citaions", force: :cascade do |t|
+  create_table "warning_citations", force: :cascade do |t|
     t.string "book_num"
     t.string "issued_to"
     t.string "start_c_num"

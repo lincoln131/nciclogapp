@@ -1,2 +1,0 @@
-module CivilCitaionsHelper
-end

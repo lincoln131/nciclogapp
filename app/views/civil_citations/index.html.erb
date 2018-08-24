@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Civil Citations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Book num</th>
+      <th>Issued to</th>
+      <th>Start c num</th>
+      <th>End c num</th>
+      <th>Issue date</th>
+      <th>Issue by</th>
+      <th>Return date</th>
+      <th>Return by</th>
+      <th>Empty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @civil_citations.each do |civil_citation| %>
+      <tr>
+        <td><%= civil_citation.book_num %></td>
+        <td><%= civil_citation.issued_to %></td>
+        <td><%= civil_citation.start_c_num %></td>
+        <td><%= civil_citation.end_c_num %></td>
+        <td><%= civil_citation.issue_date %></td>
+        <td><%= civil_citation.issue_by %></td>
+        <td><%= civil_citation.return_date %></td>
+        <td><%= civil_citation.return_by %></td>
+        <td><%= civil_citation.empty %></td>
+        <td><%= link_to 'Show', civil_citation %></td>
+        <td><%= link_to 'Edit', edit_civil_citation_path(civil_citation) %></td>
+        <td><%= link_to 'Destroy', civil_citation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Civil Citation', new_civil_citation_path %>

@@ -1,2 +1,0 @@
-class WarningCitaion < ApplicationRecord
-end

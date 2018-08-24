@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book num:</strong>
+  <%= @code_citation.book_num %>
+</p>
+
+<p>
+  <strong>Issued to:</strong>
+  <%= @code_citation.issued_to %>
+</p>
+
+<p>
+  <strong>Start c num:</strong>
+  <%= @code_citation.start_c_num %>
+</p>
+
+<p>
+  <strong>End c num:</strong>
+  <%= @code_citation.end_c_num %>
+</p>
+
+<p>
+  <strong>Issue date:</strong>
+  <%= @code_citation.issue_date %>
+</p>
+
+<p>
+  <strong>Issue by:</strong>
+  <%= @code_citation.issue_by %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @code_citation.return_date %>
+</p>
+
+<p>
+  <strong>Return by:</strong>
+  <%= @code_citation.return_by %>
+</p>
+
+<p>
+  <strong>Empty:</strong>
+  <%= @code_citation.empty %>
+</p>
+
+<%= link_to 'Edit', edit_code_citation_path(@code_citation) %> |
+<%= link_to 'Back', code_citations_path %>
