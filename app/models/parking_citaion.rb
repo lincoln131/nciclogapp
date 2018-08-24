@@ -1,0 +1,2 @@
+class ParkingCitaion < ApplicationRecord
+end

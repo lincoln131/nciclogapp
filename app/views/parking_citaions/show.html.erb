@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book num:</strong>
+  <%= @parking_citaion.book_num %>
+</p>
+
+<p>
+  <strong>Issued to:</strong>
+  <%= @parking_citaion.issued_to %>
+</p>
+
+<p>
+  <strong>Start c num:</strong>
+  <%= @parking_citaion.start_c_num %>
+</p>
+
+<p>
+  <strong>End c num:</strong>
+  <%= @parking_citaion.end_c_num %>
+</p>
+
+<p>
+  <strong>Issue date:</strong>
+  <%= @parking_citaion.issue_date %>
+</p>
+
+<p>
+  <strong>Issue by:</strong>
+  <%= @parking_citaion.issue_by %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @parking_citaion.return_date %>
+</p>
+
+<p>
+  <strong>Return by:</strong>
+  <%= @parking_citaion.return_by %>
+</p>
+
+<p>
+  <strong>Empty:</strong>
+  <%= @parking_citaion.empty %>
+</p>
+
+<%= link_to 'Edit', edit_parking_citaion_path(@parking_citaion) %> |
+<%= link_to 'Back', parking_citaions_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book_num: MyString
+  issued_to: MyString
+  start_c_num: MyString
+  end_c_num: MyString
+  issue_date: MyString
+  issue_by: MyString
+  return_date: MyString
+  return_by: MyText
+  empty: MyString
+
+two:
+  book_num: MyString
+  issued_to: MyString
+  start_c_num: MyString
+  end_c_num: MyString
+  issue_date: MyString
+  issue_by: MyString
+  return_date: MyString
+  return_by: MyText
+  empty: MyString

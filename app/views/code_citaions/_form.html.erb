@@ -1,0 +1,62 @@
+<%= form_with(model: code_citaion, local: true) do |form| %>
+  <% if code_citaion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(code_citaion.errors.count, "error") %> prohibited this code_citaion from being saved:</h2>
+
+      <ul>
+      <% code_citaion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :book_num %>
+    <%= form.text_field :book_num, id: :code_citaion_book_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issued_to %>
+    <%= form.text_field :issued_to, id: :code_citaion_issued_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_c_num %>
+    <%= form.text_field :start_c_num, id: :code_citaion_start_c_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_c_num %>
+    <%= form.text_field :end_c_num, id: :code_citaion_end_c_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issue_date %>
+    <%= form.text_field :issue_date, id: :code_citaion_issue_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issue_by %>
+    <%= form.text_field :issue_by, id: :code_citaion_issue_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :return_date %>
+    <%= form.text_field :return_date, id: :code_citaion_return_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :return_by %>
+    <%= form.text_area :return_by, id: :code_citaion_return_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empty %>
+    <%= form.text_field :empty, id: :code_citaion_empty %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

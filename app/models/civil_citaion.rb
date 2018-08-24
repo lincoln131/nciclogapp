@@ -1,0 +1,2 @@
+class CivilCitaion < ApplicationRecord
+end

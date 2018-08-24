@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :code_citaions
+  resources :parking_citaions
+  resources :warning_citaions
+  resources :civil_citaions
+  resources :state_citaions
   #add route for my fancy page
   get "/pages/:page" => "pages#show"
   resources :wanted_people

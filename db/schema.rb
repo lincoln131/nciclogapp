@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180711163519) do
+ActiveRecord::Schema.define(version: 20180824202312) do
 
   create_table "articles", force: :cascade do |t|
     t.string "oca"
@@ -41,6 +41,34 @@ ActiveRecord::Schema.define(version: 20180711163519) do
     t.string "date_add"
     t.string "date_remove"
     t.string "remove_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "civil_citaions", force: :cascade do |t|
+    t.string "book_num"
+    t.string "issued_to"
+    t.string "start_c_num"
+    t.string "end_c_num"
+    t.string "issue_date"
+    t.string "issue_by"
+    t.string "return_date"
+    t.text "return_by"
+    t.string "empty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "code_citaions", force: :cascade do |t|
+    t.string "book_num"
+    t.string "issued_to"
+    t.string "start_c_num"
+    t.string "end_c_num"
+    t.string "issue_date"
+    t.string "issue_by"
+    t.string "return_date"
+    t.text "return_by"
+    t.string "empty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -76,6 +104,20 @@ ActiveRecord::Schema.define(version: 20180711163519) do
     t.string "date_add"
     t.string "date_remove"
     t.string "remove_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parking_citaions", force: :cascade do |t|
+    t.string "book_num"
+    t.string "issued_to"
+    t.string "start_c_num"
+    t.string "end_c_num"
+    t.string "issue_date"
+    t.string "issue_by"
+    t.string "return_date"
+    t.text "return_by"
+    t.string "empty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -128,6 +170,20 @@ ActiveRecord::Schema.define(version: 20180711163519) do
     t.string "date_add"
     t.string "date_remove"
     t.string "remove_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "state_citaions", force: :cascade do |t|
+    t.string "book_num"
+    t.string "issued_to"
+    t.string "start_c_num"
+    t.string "end_c_num"
+    t.string "issue_date"
+    t.string "issue_by"
+    t.string "return_date"
+    t.text "return_by"
+    t.string "empty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -197,6 +253,20 @@ ActiveRecord::Schema.define(version: 20180711163519) do
     t.string "date_add"
     t.string "date_remove"
     t.string "remove_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "warning_citaions", force: :cascade do |t|
+    t.string "book_num"
+    t.string "issued_to"
+    t.string "start_c_num"
+    t.string "end_c_num"
+    t.string "issue_date"
+    t.string "issue_by"
+    t.string "return_date"
+    t.text "return_by"
+    t.string "empty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

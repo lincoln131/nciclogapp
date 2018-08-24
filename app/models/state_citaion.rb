@@ -1,0 +1,2 @@
+class StateCitaion < ApplicationRecord
+end
