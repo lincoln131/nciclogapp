@@ -10,50 +10,50 @@
       </ul>
     </div>
   <% end %>
-
-   <div class="field">
-    <%= form.label :book_num %>
+<p style="text-align: left;">⚠<br>Please be careful during entry,<br>as you will not be able to modify data<br>after it has been submitted.</p>
+  <div class="field">
+    <%= form.label :book_num, "Citation Book #" %>
     <%= form.text_field :book_num, id: :parking_citation_book_num, :required => true, :readonly => parking_citation.book_num.present?  %>
   </div>
 
   <div class="field">
-    <%= form.label :issued_to %>
+    <%= form.label :issued_to, "Issued To ?" %>
     <%= form.text_field :issued_to, id: :parking_citation_issued_to, :required => true, :readonly => parking_citation.issued_to.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :start_c_num %>
+    <%= form.label :start_c_num, "Starting Citation #" %>
     <%= form.text_field :start_c_num, id: :parking_citation_start_c_num, :required => true, :readonly => parking_citation.start_c_num.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :end_c_num %>
+    <%= form.label :end_c_num, "Ending Citation #" %>
     <%= form.text_field :end_c_num, id: :parking_citation_end_c_num, :required => true, :readonly => parking_citation.end_c_num.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :issue_date %>
+    <%= form.label :issue_date, "Date Issued?" %>
     <%= form.text_field :issue_date, id: :parking_citation_issue_date, :required => true, :readonly => parking_citation.issue_date.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :issue_by %>
+    <%= form.label :issue_by, "Issued By?" %>
     <%= form.text_field :issue_by, id: :parking_citation_issue_by, :required => true, :readonly => parking_citation.issue_by.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :return_date %>
-    <%= form.text_field :return_date, id: :parking_citation_return_date, :required => true, :readonly => parking_citation.return_date.present? %>
+    <%= form.label :return_date, "Date Returned?" %>
+    <%= form.text_field :return_date, id: :parking_citation_return_date, :readonly => parking_citation.return_date.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :return_by %>
-    <%= form.text_area :return_by, id: :parking_citation_return_by, :required => true, :readonly => parking_citation.return_by.present? %>
+    <%= form.label :return_by, "Returned By?" %>
+    <%= form.text_area :return_by, id: :parking_citation_return_by, :readonly => parking_citation.return_by.present? %>
   </div>
 
   <div class="field">
-    <%= form.label :empty %>
-    <%= form.text_field :empty, id: :parking_citation_empty, :required => true, :readonly => parking_citation.empty.present? %>
+    <%= form.label :empty, "All Citations in this Book Used?" %>
+    <%= form.check_box :empty, id: :parking_citation_empty, :readonly => parking_citation.empty.present? %>
   </div>
 
   <div class="actions">

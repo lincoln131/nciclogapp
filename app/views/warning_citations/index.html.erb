@@ -17,14 +17,18 @@
       <th>Issue By?</th>
       <th>Return Date?</th>
       <th>Received By?</th>
-      <th>Can Reissue?</th>
+      <th>Can Be Reassigned?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @warning_citations.each do |warning_citation| %>
-      <tr>
+    <% @warning_citations.order(empty: :asc, created_at: :desc).each do |warning_citation| %>
+      <% if warning_citation.empty == "1" %> <%# Sets formatting for Cleared %>
+        <tr class = "cleared">
+      <% elsif warning_citation.created_at > DateTime.now.in_time_zone.midnight %> <%# Sets formatting for new%>
+        <tr class = "new">
+      <% end %>
         <td><%= warning_citation.book_num %></td>
         <td><%= warning_citation.issued_to %></td>
         <td><%= warning_citation.start_c_num %></td>
@@ -33,10 +37,10 @@
         <td><%= warning_citation.issue_by %></td>
         <td><%= warning_citation.return_date %></td>
         <td><%= warning_citation.return_by %></td>
-        <td><%= warning_citation.empty %></td>
+        <td><%= if warning_citation.empty == "1" then "No" else "Yes"; end  %></td>
         <td><%= link_to 'Show', warning_citation %></td>
         <td><%= link_to 'Edit', edit_warning_citation_path(warning_citation) %></td>
-        <td><%= link_to 'Destroy', warning_citation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', warning_citation, method: :delete, data: { confirm: 'Are you sure? This cannot be undone.' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -3,7 +3,6 @@
 <h1 style="text-align: center;"> <%= link_to 'Civil Citations', new_civil_citation_path, class: "invisLink" %></h1>
 <p  style="text-align: center;"> <br><%= link_to 'State', state_citations_path, class: "invisLink"  %> | <%= link_to 'Warning', warning_citations_path, class: "invisLink"  %> | <%= link_to 'Parking', parking_citations_path, class: "invisLink"  %> | <%= link_to 'Civil', civil_citations_path, class: "invisLink"  %> |<%= link_to 'Code', code_citations_path, class: "invisLink"  %></p>
 
-
 <%= link_to 'New Civil Citation', new_civil_citation_path, class: "myButton" %>
 <br>
 <br>
@@ -18,14 +17,14 @@
       <th>Issue By?</th>
       <th>Return Date?</th>
       <th>Received By?</th>
-      <th>Can Reissue?</th>
+      <th>Can Be Reassigned?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @civil_citations.order(return_date: :asc, created_at: :desc).each do |civil_citation| %>
-      <% if civil_citation.empty.present? %>
+    <% @civil_citations.order(empty: :asc, created_at: :desc).each do |civil_citation| %>
+      <% if civil_citation.empty == "1" %> <%# Sets formatting for Cleared %>
         <tr class = "cleared">
       <% elsif civil_citation.created_at > DateTime.now.in_time_zone.midnight %> <%# Sets formatting for new%>
         <tr class = "new">
@@ -38,10 +37,10 @@
         <td><%= civil_citation.issue_by %></td>
         <td><%= civil_citation.return_date %></td>
         <td><%= civil_citation.return_by %></td>
-        <td><%= civil_citation.empty %></td>
+        <td><%= if civil_citation.empty == "1" then "No" else "Yes"; end  %></td>
         <td id="smaller"><%= link_to 'Show', civil_citation %></td>
         <td id="smaller"><%= link_to 'Edit', edit_civil_citation_path(civil_citation) %></td>
-        <td id="smaller"><%= link_to 'Destroy', civil_citation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td id="smaller"><%= link_to 'Destroy', civil_citation, method: :delete, data: { confirm: 'Are you sure? This cannot be undone.' } %></td>
       </tr>
     <% end %>
   </tbody>

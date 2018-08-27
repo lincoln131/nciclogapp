@@ -17,14 +17,18 @@
       <th>Issue By?</th>
       <th>Return Date?</th>
       <th>Received By?</th>
-      <th>Can Reissue?</th>
+      <th>Can Be Reassigned?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @code_citations.each do |code_citation| %>
-      <tr>
+    <% @code_citations.order(empty: :asc, created_at: :desc).each do |code_citation| %>
+      <% if code_citation.empty == "1" %> <%# Sets formatting for Cleared %>
+        <tr class = "cleared">
+      <% elsif code_citation.created_at > DateTime.now.in_time_zone.midnight %> <%# Sets formatting for new%>
+        <tr class = "new">
+      <% end %>
         <td><%= code_citation.book_num %></td>
         <td><%= code_citation.issued_to %></td>
         <td><%= code_citation.start_c_num %></td>
@@ -33,10 +37,10 @@
         <td><%= code_citation.issue_by %></td>
         <td><%= code_citation.return_date %></td>
         <td><%= code_citation.return_by %></td>
-        <td><%= code_citation.empty %></td>
+        <td><%= if code_citation.empty == "1" then "No" else "Yes"; end  %></td>
         <td><%= link_to 'Show', code_citation %></td>
         <td><%= link_to 'Edit', edit_code_citation_path(code_citation) %></td>
-        <td><%= link_to 'Destroy', code_citation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', code_citation, method: :delete, data: { confirm: 'Are you sure? This cannot be undone.' } %></td>
       </tr>
     <% end %>
   </tbody>
