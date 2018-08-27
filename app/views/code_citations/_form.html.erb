@@ -11,49 +11,49 @@
     </div>
   <% end %>
 
-  <div class="field">
+   <div class="field">
     <%= form.label :book_num %>
-    <%= form.text_field :book_num, id: :code_citation_book_num %>
+    <%= form.text_field :book_num, id: :code_citation_book_num, :required => true, :readonly => code_citation.book_num.present?  %>
   </div>
 
   <div class="field">
     <%= form.label :issued_to %>
-    <%= form.text_field :issued_to, id: :code_citation_issued_to %>
+    <%= form.text_field :issued_to, id: :code_citation_issued_to, :required => true, :readonly => code_citation.issued_to.present? %>
   </div>
 
   <div class="field">
     <%= form.label :start_c_num %>
-    <%= form.text_field :start_c_num, id: :code_citation_start_c_num %>
+    <%= form.text_field :start_c_num, id: :code_citation_start_c_num, :required => true, :readonly => code_citation.start_c_num.present? %>
   </div>
 
   <div class="field">
     <%= form.label :end_c_num %>
-    <%= form.text_field :end_c_num, id: :code_citation_end_c_num %>
+    <%= form.text_field :end_c_num, id: :code_citation_end_c_num, :required => true, :readonly => code_citation.end_c_num.present? %>
   </div>
 
   <div class="field">
     <%= form.label :issue_date %>
-    <%= form.text_field :issue_date, id: :code_citation_issue_date %>
+    <%= form.text_field :issue_date, id: :code_citation_issue_date, :required => true, :readonly => code_citation.issue_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :issue_by %>
-    <%= form.text_field :issue_by, id: :code_citation_issue_by %>
+    <%= form.text_field :issue_by, id: :code_citation_issue_by, :required => true, :readonly => code_citation.issue_by.present? %>
   </div>
 
   <div class="field">
     <%= form.label :return_date %>
-    <%= form.text_field :return_date, id: :code_citation_return_date %>
+    <%= form.text_field :return_date, id: :code_citation_return_date, :required => true, :readonly => code_citation.return_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :return_by %>
-    <%= form.text_area :return_by, id: :code_citation_return_by %>
+    <%= form.text_area :return_by, id: :code_citation_return_by, :required => true, :readonly => code_citation.return_by.present? %>
   </div>
 
   <div class="field">
     <%= form.label :empty %>
-    <%= form.text_field :empty, id: :code_citation_empty %>
+    <%= form.text_field :empty, id: :code_citation_empty, :required => true, :readonly => code_citation.empty.present? %>
   </div>
 
   <div class="actions">

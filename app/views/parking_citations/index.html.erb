@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
-<h1> <%= link_to 'HPD CITATION LOG', '/pages/citationMenu', class: "invisLink" %></h1>
-<h1> <%= link_to 'Parking Citations', new_parking_citation_path, class: "invisLink" %></h1>
+<h1 style="text-align: center;"><%= link_to '🚓Citation🚨Book🚨LOG🚓', '/pages/citationMenu', class: "invisLink" %></h1>
+<h1 style="text-align: center;"> <%= link_to 'Parking Citations', new_parking_citation_path, class: "invisLink" %></h1>
+<p  style="text-align: center;"> <br><%= link_to 'State', state_citations_path, class: "invisLink"  %> | <%= link_to 'Warning', warning_citations_path, class: "invisLink"  %> | <%= link_to 'Parking', parking_citations_path, class: "invisLink"  %> | <%= link_to 'Civil', civil_citations_path, class: "invisLink"  %> |<%= link_to 'Code', code_citations_path, class: "invisLink"  %></p>
+
 <%= link_to 'New Parking Citation', new_parking_citation_path, class: "myButton" %>
 <br>
 <br>
@@ -39,6 +41,5 @@
     <% end %>
   </tbody>
 </table>
-
-<br><%= link_to 'State', state_citations_path, class: "invisLink"  %> | <%= link_to 'Warning', warning_citations_path, class: "invisLink"  %> | <%= link_to 'Parking', parking_citations_path, class: "invisLink"  %> | <%= link_to 'Civil', civil_citations_path, class: "invisLink"  %> |<%= link_to 'Code', code_citations_path, class: "invisLink"  %>
-
+<p style="text-align: center;">If you have an issue, contact <a href="mailto:csexton@hickorync.gov">📧csexton@hickorync.gov</a>.</p>
+<p style="text-align: center;"><%= link_to '💩v2.0 2018', '/pages/about' , class: "invisLink" %></p>
