@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   resources :boats
   resources :articles
   #make my fancy page show up as index
-  root "pages#show", page: "index"
+  root "pages#show", page: "menu"
 end

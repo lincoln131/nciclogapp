@@ -1,22 +1,26 @@
 <html>
-<h1 style="text-align: center;"><%= link_to '💥HPD 💣 LOG💥', '/pages/index', class: "invisLink" %></h1>
+<h1 style="text-align: center;"><%= link_to '💥HPD 💣 LOG💥', '/pages/about', class: "invisLink" %></h1>
 <br>
-<table style="width: 900px; margin-left: auto; margin-right: auto;">
+<table style="width: 1075px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
-<td style="width: 300px;">
+<td style="width: 400px;">
 <h1 style="text-align: center;"><%= link_to '🚓NCIC🚨LOG🚓', '/pages/main' , class: "invisLink" %></h1>
 <h3 style="text-align: center;"><%= link_to 'Communications!!', '/pages/main' , class: "invisLink" %></h3>
 </td>
-<td style="width: 300px;">
-<h2 style="text-align: center;"><%= link_to 'For All Your Logging Needs', '/pages/about' , class: "invisLink" %></h2>
+<td style="width: 275px;">
+<h2 style="text-align: center;"> <%=image_tag("log.png", class: 'image')%><%= link_to 'For All Your Logging Needs!', '/pages/about' , class: "invisLink" %></h2>
 </td>
-<td style="width: 300px;">
-<h1 style="text-align: center;"><%= link_to '🚓Citation🚨LOG🚓', '/pages/citationMenu' , class: "invisLink" %></h1>
+<td style="width: 400px;">
+<h1 style="text-align: center;"><%= link_to('/pages/citationMenu', class: "invisLink") do %>
+                                🚓Citation Book🚓
+                                <br> <br>
+                                🚨LOG🚨
+                                <% end %></h1>
 <h3 style="text-align: center;"><%= link_to 'Records!', '/pages/citationMenu' , class: "invisLink" %></h3>
 </td>
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><%= link_to '💩v1.7 2018', '/pages/index' , class: "invisLink" %></p>
+<p style="text-align: center;"><%= link_to '💩v1.7 2018', '/pages/about' , class: "invisLink" %></p>
 </html>

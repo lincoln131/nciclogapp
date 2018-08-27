@@ -1,7 +1,17 @@
 <p id="notice"><%= notice %></p>
-<h1> <%= link_to 'HPD NCIC LOG', '/pages/main', class: "invisLink" %></h1>
-<h1> <%= link_to '🛥️ Boats', new_boat_path, class: "invisLink" %></h1>
-Boats only! No hoes, please. 👍 <br> <br>
+<h1 style="text-align: center;"> <%= link_to 'HPD NCIC LOG', '/pages/main', class: "invisLink" %></h1>
+<%  b = ['🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats','🛥️ Boats & Hoes! 💃🕺']
+    r = Random.new
+    r = r.rand(b.length)
+    b = b[r]
+%>
+<h1 style="text-align: center;"> <%= link_to b , new_boat_path, class: "invisLink" %></h1>
+
+<p style="text-align: center;">
+<br><%= link_to '🚽Articles', articles_path, class: "invisLink"  %> | <%= link_to '🛥️Boats', boats_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path, class: "invisLink"  %> | <%= link_to '🚘License Plates', license_plates_path, class: "invisLink"  %> | <%= link_to '😕Missing Persons', missing_people_path, class: "invisLink"  %>
+<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path, class: "invisLink"  %> | <%= link_to '💲Securities', securities_path, class: "invisLink"  %> | <%= link_to '😢Wanted - Persons', wanted_people_path, class: "invisLink"  %>
+</p>
+
 <%= link_to 'New Boat', new_boat_path, class: "myButton" %>
 <br>
 <br>
@@ -48,7 +58,3 @@ Boats only! No hoes, please. 👍 <br> <br>
     <% end %>
   </tbody>
 </table>
-
-
-<br><%= link_to '🚽Articles', articles_path, class: "invisLink"  %> | <%= link_to '🛥️Boats', boats_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Recovered', recovered_guns_path, class: "invisLink"  %> | <%= link_to '🔫Guns - Stolen', stolen_guns_path, class: "invisLink"  %> | <%= link_to '🚘License Plates', license_plates_path, class: "invisLink"  %> | <%= link_to '😕Missing Persons', missing_people_path, class: "invisLink"  %>
-<br> <%= link_to '🔩Parts - Vehicles / Boats', vehicle_boat_parts_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Stolen', stolen_vehicles_path, class: "invisLink"  %> | <%= link_to '🚗Vehicles - Recovered', recovered_vehicles_path, class: "invisLink"  %> | <%= link_to '💲Securities', securities_path, class: "invisLink"  %> | <%= link_to '😢Wanted - Persons', wanted_people_path, class: "invisLink"  %>
