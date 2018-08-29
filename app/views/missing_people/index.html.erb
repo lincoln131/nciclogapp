@@ -30,7 +30,7 @@
   </thead>
 
   <tbody>
-    <% @missing_people.order(date_remove: :asc, created_at: :desc).each do |missing_person| %>
+    <% @missing_people.order(date_remove: :asc, oca: :desc, created_at: :desc).each do |missing_person| %>
       <% if missing_person.date_remove.present? %>
         <tr class = "cleared">
       <% elsif missing_person.created_at > DateTime.now.in_time_zone.midnight %>

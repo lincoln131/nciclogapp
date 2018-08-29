@@ -29,7 +29,7 @@
   </thead>
 
   <tbody>
-    <% @recovered_vehicles.order(date_remove: :asc, created_at: :desc).each do |recovered_vehicle| %>
+    <% @recovered_vehicles.order(date_remove: :asc, oca: :desc, created_at: :desc).each do |recovered_vehicle| %>
       <% if recovered_vehicle.date_remove.present? %>
         <tr class = "cleared">
       <% elsif recovered_vehicle.created_at > DateTime.now.in_time_zone.midnight %>

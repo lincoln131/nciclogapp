@@ -30,7 +30,7 @@
   </thead>
 
   <tbody>
-    <% @recovered_guns.order(date_remove: :asc, created_at: :desc).each do |recovered_gun| %>
+    <% @recovered_guns.order(date_remove: :asc, oca: :desc, created_at: :desc).each do |recovered_gun| %>
       <% if recovered_gun.date_remove.present? %>
         <tr class = "cleared">
       <% elsif recovered_gun.created_at > DateTime.now.in_time_zone.midnight %>

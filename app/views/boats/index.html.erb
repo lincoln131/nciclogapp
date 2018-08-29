@@ -33,7 +33,7 @@
   </thead>
 
   <tbody>
-    <% @boats.order(date_remove: :asc, created_at: :desc).each do |boat| %>
+    <% @boats.order(date_remove: :asc, oca: :desc, created_at: :desc).each do |boat| %>
     	<% if boat.date_remove.present? %>
         <tr class = "cleared">
       <% elsif boat.created_at > DateTime.now.in_time_zone.midnight %>

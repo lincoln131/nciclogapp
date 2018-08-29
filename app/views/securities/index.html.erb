@@ -26,7 +26,7 @@
   </thead>
 
   <tbody>
-    <% @securities.order(date_remove: :asc, created_at: :desc).each do |security| %>
+    <% @securities.order(date_remove: :asc, oca: :desc, created_at: :desc).each do |security| %>
       <% if security.date_remove.present? %>
         <tr class = "cleared">
       <% elsif security.created_at > DateTime.now.in_time_zone.midnight %>
