@@ -4,6 +4,7 @@ class CreateRecoveredVehicles < ActiveRecord::Migration[5.1]
       t.string :oca
       t.string :operator_name
       t.string :officer_name
+      t.string :ncic_num
       t.string :year
       t.string :make
       t.string :model

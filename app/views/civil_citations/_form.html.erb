@@ -13,32 +13,32 @@
 <p style="text-align: left;">⚠<br>Please be careful during entry,<br>as you will not be able to modify data<br>after it has been submitted.</p>
   <div class="field">
     <%= form.label :book_num, "Citation Book #" %>
-    <%= form.text_field :book_num, id: :civil_citation_book_num, :required => true, :readonly => civil_citation.book_num.present?  %>
+    <%= form.text_field :book_num, id: :civil_citation_book_num %>
   </div>
 
   <div class="field">
     <%= form.label :issued_to, "Issued To ?" %>
-    <%= form.text_field :issued_to, id: :civil_citation_issued_to, :required => true, :readonly => civil_citation.issued_to.present? %>
+    <%= form.text_field :issued_to, id: :civil_citation_issued_to  %>
   </div>
 
   <div class="field">
     <%= form.label :start_c_num, "Starting Citation #" %>
-    <%= form.text_field :start_c_num, id: :civil_citation_start_c_num, :required => true, :readonly => civil_citation.start_c_num.present? %>
+    <%= form.text_field :start_c_num, id: :civil_citation_start_c_num %>
   </div>
 
   <div class="field">
     <%= form.label :end_c_num, "Ending Citation #" %>
-    <%= form.text_field :end_c_num, id: :civil_citation_end_c_num, :required => true, :readonly => civil_citation.end_c_num.present? %>
+    <%= form.text_field :end_c_num, id: :civil_citation_end_c_num %>
   </div>
 
   <div class="field">
     <%= form.label :issue_date, "Date Issued?" %>
-    <%= form.text_field :issue_date, id: :civil_citation_issue_date, :required => true, :readonly => civil_citation.issue_date.present? %>
+    <%= form.text_field :issue_date, id: :civil_citation_issue_date %>
   </div>
 
   <div class="field">
     <%= form.label :issue_by, "Issued By?" %>
-    <%= form.text_field :issue_by, id: :civil_citation_issue_by, :required => true, :readonly => civil_citation.issue_by.present? %>
+    <%= form.text_field :issue_by, id: :civil_citation_issue_by %>
   </div>
 
   <div class="field">

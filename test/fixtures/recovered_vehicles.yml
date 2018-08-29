@@ -4,6 +4,7 @@ one:
   oca: MyString
   operator_name: MyString
   officer_name: MyString
+  ncic_num: MyString
   year: MyString
   make: MyString
   model: MyString
@@ -19,6 +20,7 @@ two:
   oca: MyString
   operator_name: MyString
   officer_name: MyString
+  ncic_num: MyString
   year: MyString
   make: MyString
   model: MyString

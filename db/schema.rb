@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180824203613) do
+ActiveRecord::Schema.define(version: 20180829204127) do
 
   create_table "articles", force: :cascade do |t|
     t.string "oca"
@@ -145,6 +145,7 @@ ActiveRecord::Schema.define(version: 20180824203613) do
     t.string "oca"
     t.string "operator_name"
     t.string "officer_name"
+    t.string "ncic_num"
     t.string "year"
     t.string "make"
     t.string "model"

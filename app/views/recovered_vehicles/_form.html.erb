@@ -13,57 +13,62 @@
 <p style="text-align: left;">⚠<br>Please be careful during entry,<br>as you will not be able to modify data<br>after it has been submitted.</p>
   <div class="field">
     <%= form.label :oca %>
-    <%= form.text_field :oca, id: :recovered_vehicle_oca , :required => true, :readonly =>recovered_vehicle.oca.present? %>
+    <%= form.text_field :oca, id: :recovered_vehicle_oca %>
   </div>
 
   <div class="field">
     <%= form.label :operator_name %>
-    <%= form.text_field :operator_name, id: :recovered_vehicle_operator_name , :required => true, :readonly =>recovered_vehicle.operator_name.present? %>
+    <%= form.text_field :operator_name, id: :recovered_vehicle_operator_name %>
   </div>
 
   <div class="field">
     <%= form.label :officer_name %>
-    <%= form.text_field :officer_name, id: :recovered_vehicle_officer_name , :required => true, :readonly =>recovered_vehicle.officer_name.present? %>
+    <%= form.text_field :officer_name, id: :recovered_vehicle_officer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ncic_num %>
+    <%= form.text_field :ncic_num, id: :recovered_vehicle_ncic_num %>
   </div>
 
   <div class="field">
     <%= form.label :year %>
-    <%= form.text_field :year, id: :recovered_vehicle_year , :required => true, :readonly =>recovered_vehicle.year.present? %>
+    <%= form.text_field :year, id: :recovered_vehicle_year %>
   </div>
 
   <div class="field">
     <%= form.label :make %>
-    <%= form.text_field :make, id: :recovered_vehicle_make , :required => true, :readonly =>recovered_vehicle.make.present? %>
+    <%= form.text_field :make, id: :recovered_vehicle_make %>
   </div>
 
   <div class="field">
     <%= form.label :model %>
-    <%= form.text_field :model, id: :recovered_vehicle_model , :required => true, :readonly =>recovered_vehicle.model.present? %>
+    <%= form.text_field :model, id: :recovered_vehicle_model %>
   </div>
 
   <div class="field">
     <%= form.label :vin %>
-    <%= form.text_field :vin, id: :recovered_vehicle_vin , :required => true, :readonly =>recovered_vehicle.vin.present? %>
+    <%= form.text_field :vin, id: :recovered_vehicle_vin %>
   </div>
 
   <div class="field">
     <%= form.label :license_plate %>
-    <%= form.text_field :license_plate, id: :recovered_vehicle_license_plate , :required => true, :readonly =>recovered_vehicle.license_plate.present? %>
+    <%= form.text_field :license_plate, id: :recovered_vehicle_license_plate %>
   </div>
 
   <div class="field">
     <%= form.label :color %>
-    <%= form.text_field :color, id: :recovered_vehicle_color , :required => true, :readonly =>recovered_vehicle.color.present? %>
+    <%= form.text_field :color, id: :recovered_vehicle_color %>
   </div>
 
   <div class="field">
     <%= form.label :wrecker %>
-    <%= form.text_field :wrecker, id: :recovered_vehicle_wrecker , :required => true, :readonly =>recovered_vehicle.wrecker.present? %>
+    <%= form.text_field :wrecker, id: :recovered_vehicle_wrecker %>
   </div>
 
   <div class="field">
     <%= form.label :date_add %>
-    <%= form.text_field :date_add, id: :recovered_vehicle_date_add , :required => true, :readonly =>recovered_vehicle.date_add.present? %>
+    <%= form.text_field :date_add, id: :recovered_vehicle_date_add %>
   </div>
 
   <div class="field">

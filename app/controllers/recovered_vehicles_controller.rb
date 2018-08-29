@@ -69,6 +69,6 @@ class RecoveredVehiclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recovered_vehicle_params
-      params.require(:recovered_vehicle).permit(:oca, :operator_name, :officer_name, :year, :make, :model, :vin, :license_plate, :color, :wrecker, :date_add, :date_remove, :remove_by)
+      params.require(:recovered_vehicle).permit(:oca, :operator_name, :officer_name, :ncic_num, :year, :make, :model, :vin, :license_plate, :color, :wrecker, :date_add, :date_remove, :remove_by)
     end
 end
