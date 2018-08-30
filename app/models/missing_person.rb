@@ -1,16 +1,5 @@
 class MissingPerson < ApplicationRecord
-    validates :oca, presence: true
-    validates :operator_name, presence: true
-    validates :officer_name, presence: true
-    validates :ncic_num, presence: true
-    validates :missing_f_name, presence: true
-    validates :missing_l_name, presence: true
-    validates :missing_dob, presence: true
-    validates :missing_race, presence: true
-    validates :missing_sex, presence: true
-    validates :owner_name, presence: true
-    validates :owner_phone, presence: true
-    validates :date_add, presence: true
+    validates :oca, :operator_name, :officer_name, :ncic_num, :missing_f_name, :missing_l_name, :missing_dob, :missing_race, :missing_sex, :owner_name, :owner_phone, :date_add, presence: true
 
     validates :oca, format: {with: /(\A([0-9]{1}[0-9]{1}-{1}[0]{1}[01]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1})\z)|(\A\z)/, message:" - YY-NNNNNN"}
     validates :owner_phone, format: {with: /(\A[2-9]\d{2}-\d{3}-\d{4}\z)|(\A\z)/,message:" - XXX-XXX-XXXX"}
