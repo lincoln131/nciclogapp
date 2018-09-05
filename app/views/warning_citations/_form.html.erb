@@ -10,35 +10,35 @@
       </ul>
     </div>
   <% end %>
-<p style="text-align: left;">⚠<br>Please be careful during entry,<br>as you will not be able to modify data<br>after it has been submitted.</p>
+<p style="text-align: left;">⚠<br>Please be careful during entry!</p>
   <div class="field">
     <%= form.label :book_num, "Citation Book #" %>
-    <%= form.text_field :book_num, id: :warning_citation_book_num %>
+    <%= form.text_field :book_num, id: :warning_citation_book_num, :readonly => warning_citation.return_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :issued_to, "Issued To ?" %>
-    <%= form.text_field :issued_to, id: :warning_citation_issued_to %>
+    <%= form.text_field :issued_to, id: :warning_citation_issued_to, :readonly => warning_citation.return_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :start_c_num, "Starting Citation #" %>
-    <%= form.text_field :start_c_num, id: :warning_citation_start_c_num %>
+    <%= form.text_field :start_c_num, id: :warning_citation_start_c_num, :readonly => warning_citation.return_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :end_c_num, "Ending Citation #" %>
-    <%= form.text_field :end_c_num, id: :warning_citation_end_c_num %>
+    <%= form.text_field :end_c_num, id: :warning_citation_end_c_num, :readonly => warning_citation.return_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :issue_date, "Date Issued?" %>
-    <%= form.text_field :issue_date, id: :warning_citation_issue_date %>
+    <%= form.text_field :issue_date, id: :warning_citation_issue_date, :readonly => warning_citation.return_date.present? %>
   </div>
 
   <div class="field">
     <%= form.label :issue_by, "Issued By?" %>
-    <%= form.text_field :issue_by, id: :warning_citation_issue_by %>
+    <%= form.text_field :issue_by, id: :warning_citation_issue_by, :readonly => warning_citation.return_date.present? %>
   </div>
 
   <div class="field">
