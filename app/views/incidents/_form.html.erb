@@ -1,0 +1,34 @@
+<%= form_with(model: incident, local: true) do |form| %>
+  <% if incident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(incident.errors.count, "error") %> prohibited this incident from being saved:</h2>
+
+      <ul>
+      <% incident.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<p style="text-align: left;">⚠ Please be careful during entry!</p>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date, id: :incident_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coworker %>
+    <%= form.text_field :coworker, id: :incident_coworker %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :incident_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
