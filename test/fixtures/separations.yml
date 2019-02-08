@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  officer: MyString
+  callsign: MyString
+  ad: false
+  email: false
+  rms_login: false
+  rms_seperation: false
+  switch: false
+  cad_login: false
+  dci: false
+  ncaware: false
+  cjleads: false
+  edotcom: false
+  leads: false
+  accurint: false
+  cardkey: false
+  pwgate: false
+  linx: false
+  lexipol: false
+
+two:
+  officer: MyString
+  callsign: MyString
+  ad: false
+  email: false
+  rms_login: false
+  rms_seperation: false
+  switch: false
+  cad_login: false
+  dci: false
+  ncaware: false
+  cjleads: false
+  edotcom: false
+  leads: false
+  accurint: false
+  cardkey: false
+  pwgate: false
+  linx: false
+  lexipol: false

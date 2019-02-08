@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190111154216) do
+ActiveRecord::Schema.define(version: 20190208145629) do
 
   create_table "articles", force: :cascade do |t|
     t.string "oca"
@@ -179,6 +179,29 @@ ActiveRecord::Schema.define(version: 20190111154216) do
     t.string "date_add"
     t.string "date_remove"
     t.string "remove_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "separations", force: :cascade do |t|
+    t.string "officer"
+    t.string "callsign"
+    t.boolean "ad"
+    t.boolean "email"
+    t.boolean "rms_login"
+    t.boolean "rms_seperation"
+    t.boolean "switch"
+    t.boolean "cad_login"
+    t.boolean "dci"
+    t.boolean "ncaware"
+    t.boolean "cjleads"
+    t.boolean "edotcom"
+    t.boolean "leads"
+    t.boolean "accurint"
+    t.boolean "cardkey"
+    t.boolean "pwgate"
+    t.boolean "linx"
+    t.boolean "lexipol"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,107 @@
+<%= form_with(model: separation, local: true) do |form| %>
+  <% if separation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(separation.errors.count, "error") %> prohibited this separation from being saved:</h2>
+
+      <ul>
+      <% separation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :officer, "Officer" %>
+    <%= form.text_field :officer, id: :separation_officer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :callsign, "Callsign" %>
+    <%= form.text_field :callsign, id: :separation_callsign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ad, "Active Directory" %>
+    <%= form.check_box :ad, id: :separation_ad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, "Email" %>
+    <%= form.check_box :email, id: :separation_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rms_login, "RMS Login" %>
+    <%= form.check_box :rms_login, id: :separation_rms_login %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rms_seperation, "RMS Separation" %>
+    <%= form.check_box :rms_seperation, id: :separation_rms_seperation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :switch, "Message Switch" %>
+    <%= form.check_box :switch, id: :separation_switch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cad_login, "CAD Login" %>
+    <%= form.check_box :cad_login, id: :separation_cad_login %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dci, "DCI" %>
+    <%= form.check_box :dci, id: :separation_dci %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ncaware, "NCAWaRe" %>
+    <%= form.check_box :ncaware, id: :separation_ncaware %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cjleads, "CJ Leads" %>
+    <%= form.check_box :cjleads, id: :separation_cjleads %>
+  </div>
+
+  <div class="field">
+    <%= form.label :edotcom, "Evidence.com" %>
+    <%= form.check_box :edotcom, id: :separation_edotcom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leads, "Leads Online" %>
+    <%= form.check_box :leads, id: :separation_leads %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accurint, "Accurint" %>
+    <%= form.check_box :accurint, id: :separation_accurint %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cardkey, "Card Key" %>
+    <%= form.check_box :cardkey, id: :separation_cardkey %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pwgate, "Public Works Gate" %>
+    <%= form.check_box :pwgate, id: :separation_pwgate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linx, "NC Linx" %>
+    <%= form.check_box :linx, id: :separation_linx %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lexipol, "Lexipol" %>
+    <%= form.check_box :lexipol, id: :separation_lexipol %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

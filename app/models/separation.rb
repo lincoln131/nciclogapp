@@ -1,0 +1,2 @@
+class Separation < ApplicationRecord
+end

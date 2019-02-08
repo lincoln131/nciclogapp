@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :separations
   resources :incidents
   resources :code_citations
   resources :parking_citations

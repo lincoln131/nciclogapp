@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Officer:</strong>
+  <%= @separation.officer %>
+</p>
+
+<p>
+  <strong>Callsign:</strong>
+  <%= @separation.callsign %>
+</p>
+
+<p>
+  <strong>Active Directory - IT:</strong>
+  <%= @separation.ad ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Email - Nicole/City Helpdesk:</strong>
+  <%= @separation.email ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>RMS Login - IT:</strong>
+  <%= @separation.rms_login ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>RMS Separation - Tracy:</strong>
+  <%= @separation.rms_seperation ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Message Switch - IT:</strong>
+  <%= @separation.switch ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>CAD Login - IT, if applicable:</strong>
+  <%= @separation.cad_login ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>DCI - Nicole:</strong>
+  <%= @separation.dci ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>NCAWaRe - Shelley:</strong>
+  <%= @separation.ncaware ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>CJ Leads -?:</strong>
+  <%= @separation.cjleads ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Evidence.com - IT:</strong>
+  <%= @separation.edotcom ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Leads Online - ?:</strong>
+  <%= @separation.leads ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Accurint - ?:</strong>
+  <%= @separation.accurint ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Card Key - IT:</strong>
+  <%= @separation.cardkey ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Publice Works Gate - ?:</strong>
+  <%= @separation.pwgate ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>NC Linx - ?:</strong>
+  <%= @separation.linx ? '✔️' : '❌'  %>
+</p>
+
+<p>
+  <strong>Lexipol - Vanessa:</strong>
+  <%= @separation.lexipol ? '✔️' : '❌'  %>
+</p>
+
+<%= link_to 'Edit', edit_separation_path(@separation) %> |
+<%= link_to 'Back', separations_path %>

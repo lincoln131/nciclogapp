@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Separations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Officer</th>
+      <th>Callsign</th>
+      <th>AD</th>
+      <th>Email</th>
+      <th>RmsLogin</th>
+      <th>RmsSep</th>
+      <th>Switch</th>
+      <th>CadLogin</th>
+      <th>DCI</th>
+      <th>NCAWaRe</th>
+      <th>CJLeads</th>
+      <th>E.com</th>
+      <th>Leads</th>
+      <th>Accurint</th>
+      <th>CardKey</th>
+      <th>PWGate</th>
+      <th>Linx</th>
+      <th>Lexipol</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @separations.each do |separation| %>
+      <tr>
+        <td><%= separation.officer %></td>
+        <td><%= separation.callsign %></td>
+        <td><%= separation.ad ? '✔️' : '❌' %></td>
+        <td><%= separation.email ? '✔️' : '❌' %></td>
+        <td><%= separation.rms_login ? '✔️' : '❌' %></td>
+        <td><%= separation.rms_seperation ? '✔️' : '❌' %></td>
+        <td><%= separation.switch ? '✔️' : '❌' %></td>
+        <td><%= separation.cad_login ? '✔️' : '❌' %></td>
+        <td><%= separation.dci ? '✔️' : '❌' %></td>
+        <td><%= separation.ncaware ? '✔️' : '❌' %></td>
+        <td><%= separation.cjleads ? '✔️' : '❌' %></td>
+        <td><%= separation.edotcom ? '✔️' : '❌' %></td>
+        <td><%= separation.leads ? '✔️' : '❌' %></td>
+        <td><%= separation.accurint ? '✔️' : '❌' %></td>
+        <td><%= separation.cardkey ? '✔️' : '❌' %></td>
+        <td><%= separation.pwgate ? '✔️' : '❌' %></td>
+        <td><%= separation.linx ? '✔️' : '❌' %></td>
+        <td><%= separation.lexipol ? '✔️' : '❌' %></td>
+        <td><%= link_to 'Show', separation %></td>
+        <td><%= link_to 'Edit', edit_separation_path(separation) %></td>
+        <%# <td><%= link_to 'Destroy', separation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Separation', new_separation_path %>
